@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Login/PasswordButton.gd" type="Script" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://SavingSystem.gd" type="Script" id=10]
 [ext_resource path="res://Main/Confirm/Confirm Window.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Data/EditData.gd" type="Script" id=12]
+[ext_resource path="res://Main/List Item.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Main/Search.gd" type="Script" id=14]
 
 [sub_resource type="DynamicFont" id=2]
 size = 15
@@ -146,7 +148,6 @@ __meta__ = {
 }
 
 [node name="Main" type="VBoxContainer" parent="."]
-visible = false
 margin_left = 18.0
 margin_top = 19.0
 margin_right = 1262.0
@@ -159,35 +160,45 @@ __meta__ = {
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Main"]
 margin_right = 1244.0
-margin_bottom = 34.0
+margin_bottom = 44.0
 alignment = 2
 
-[node name="Control" type="Control" parent="Main/HBoxContainer2"]
-margin_right = 534.0
-margin_bottom = 34.0
+[node name="Search" type="LineEdit" parent="Main/HBoxContainer2"]
+margin_right = 704.0
+margin_bottom = 44.0
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.09
+size_flags_stretch_ratio = 2.04
+theme = ExtResource( 9 )
+text = "sdaddsadsada"
+script = ExtResource( 14 )
+
+[node name="Control" type="Control" parent="Main/HBoxContainer2"]
+margin_left = 708.0
+margin_right = 742.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
 
 [node name="Add" type="Button" parent="Main/HBoxContainer2"]
-margin_left = 538.0
-margin_right = 1029.0
-margin_bottom = 34.0
+margin_left = 746.0
+margin_right = 1091.0
+margin_bottom = 44.0
 size_flags_horizontal = 11
 text = "ADD A NEW ENTRY"
 script = ExtResource( 6 )
 
 [node name="Settings" type="Button" parent="Main/HBoxContainer2"]
-margin_left = 1033.0
+margin_left = 1095.0
 margin_right = 1244.0
-margin_bottom = 34.0
+margin_bottom = 44.0
 size_flags_horizontal = 11
 size_flags_stretch_ratio = 0.43
 text = "SETTINGS"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Main"]
-margin_top = 38.0
+margin_top = 48.0
 margin_right = 1244.0
-margin_bottom = 82.0
+margin_bottom = 92.0
 
 [node name="LineEdit" type="LineEdit" parent="Main/HBoxContainer"]
 margin_right = 350.0
@@ -261,7 +272,7 @@ editable = false
 selecting_enabled = false
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Main"]
-margin_top = 86.0
+margin_top = 96.0
 margin_right = 1244.0
 margin_bottom = 682.0
 size_flags_horizontal = 3
@@ -269,20 +280,24 @@ size_flags_vertical = 3
 
 [node name="List" type="VBoxContainer" parent="Main/ScrollContainer"]
 margin_right = 1244.0
-margin_bottom = 34.0
+margin_bottom = 82.0
 size_flags_horizontal = 3
 theme = ExtResource( 9 )
 
+[node name="item" parent="Main/ScrollContainer/List" instance=ExtResource( 13 )]
+
 [node name="Add" type="Button" parent="Main/ScrollContainer/List"]
 margin_left = 597.0
+margin_top = 48.0
 margin_right = 647.0
-margin_bottom = 34.0
+margin_bottom = 82.0
 size_flags_horizontal = 4
 custom_fonts/font = ExtResource( 1 )
 text = "   +   "
 script = ExtResource( 6 )
 
 [node name="Data" type="VBoxContainer" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -481,4 +496,5 @@ script = ExtResource( 10 )
 [connection signal="pressed" from="Data/HBoxContainer/Cancel Entry" to="Data/HBoxContainer/Cancel Entry" method="cancel"]
 [connection signal="pressed" from="Confirm Window/VBoxContainer/HBoxContainer3/Yes" to="SavingSystem" method="save"]
 
+[editable path="Main/ScrollContainer/List/item"]
 [editable path="Confirm Window"]

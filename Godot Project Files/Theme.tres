@@ -36,3 +36,4 @@ Button/styles/focus = null
 Button/styles/hover = SubResource( 2 )
 Button/styles/normal = SubResource( 1 )
 Button/styles/pressed = SubResource( 2 )
+LineEdit/fonts/font = ExtResource( 1 )
