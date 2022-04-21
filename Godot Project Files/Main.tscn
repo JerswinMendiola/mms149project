@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Login/PasswordButton.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Theme.tres" type="Theme" id=9]
 [ext_resource path="res://SavingSystem.gd" type="Script" id=10]
 [ext_resource path="res://Main/Confirm/Confirm Window.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Data/EditData.gd" type="Script" id=12]
 
 [sub_resource type="DynamicFont" id=2]
 size = 15
@@ -282,7 +283,6 @@ text = "   +   "
 script = ExtResource( 6 )
 
 [node name="Data" type="VBoxContainer" parent="."]
-visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -294,6 +294,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 9 )
 alignment = 1
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -311,7 +312,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.29
 
-[node name="Name" type="LineEdit" parent="Data/Name/VBoxContainer"]
+[node name="NameBox" type="LineEdit" parent="Data/Name/VBoxContainer"]
 margin_right = 250.0
 margin_bottom = 44.0
 custom_fonts/font = ExtResource( 1 )
@@ -323,7 +324,7 @@ margin_top = 48.0
 margin_right = 250.0
 margin_bottom = 92.0
 
-[node name="Age" type="LineEdit" parent="Data/Name/VBoxContainer/HBoxContainer"]
+[node name="AgeBox" type="LineEdit" parent="Data/Name/VBoxContainer/HBoxContainer"]
 margin_right = 172.0
 margin_bottom = 44.0
 size_flags_horizontal = 3
@@ -340,7 +341,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 allow_greater = true
 
-[node name="Employee Number" type="LineEdit" parent="Data/Name/VBoxContainer"]
+[node name="Employee Number Box" type="LineEdit" parent="Data/Name/VBoxContainer"]
 margin_top = 96.0
 margin_right = 250.0
 margin_bottom = 140.0
@@ -348,7 +349,7 @@ custom_fonts/font = ExtResource( 1 )
 text = "EMPLOYEE NUMBER:"
 editable = false
 
-[node name="Pancakes" type="LineEdit" parent="Data/Name/VBoxContainer"]
+[node name="PancakesBox" type="LineEdit" parent="Data/Name/VBoxContainer"]
 margin_top = 144.0
 margin_right = 250.0
 margin_bottom = 188.0
@@ -375,7 +376,7 @@ margin_right = 864.0
 margin_bottom = 92.0
 size_flags_horizontal = 3
 
-[node name="Sex" type="LineEdit" parent="Data/Name/VBoxContainer2/HBoxContainer"]
+[node name="SexBox" type="LineEdit" parent="Data/Name/VBoxContainer2/HBoxContainer"]
 margin_right = 285.0
 margin_bottom = 44.0
 size_flags_horizontal = 3

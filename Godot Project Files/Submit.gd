@@ -34,14 +34,22 @@ func submit() -> void:
 	get_parent().get_parent().get_node("Name/VBoxContainer2/HBoxContainer/Male").pressed = false
 
 	var enteredData = [nameEmployee,age,sex,employeenumber,pancakes]
-	var container = load("res://Main/List Item.tscn").instance()
-	var count := 0
-	for i in enteredData:
-		var editing = container.get_child(count)
-		editing.text = i
-		count += 1
-	var list = get_parent().get_parent().get_parent().get_node("Main/ScrollContainer/List")
-	list.add_child(container)
-	var button = get_parent().get_parent().get_parent().get_node("Main/ScrollContainer/List/Add")
-	list.move_child(button,list.get_child_count())
+	if get_tree().current_scene.get_node("Data").editingEntry == null:
+		var container = load("res://Main/List Item.tscn").instance()
+		var count := 0
+		for i in enteredData:
+			var editing = container.get_child(count)
+			editing.text = i
+			count += 1
+		var list = get_parent().get_parent().get_parent().get_node("Main/ScrollContainer/List")
+		list.add_child(container)
+		var button = get_parent().get_parent().get_parent().get_node("Main/ScrollContainer/List/Add")
+		list.move_child(button,list.get_child_count())
+	else:
+		var editItem = get_tree().current_scene.get_node("Data").editingEntry
+		var count := 0
+		for i in enteredData:
+			var editing = editItem.get_child(count)
+			editing.text = i
+			count += 1
 	emit_signal("save")
