@@ -4,8 +4,8 @@ var username
 var password
 
 func _process(delta: float) -> void:
-	username = get_parent().get_node("username/usernameField").text
-	password = get_parent().get_node("password/passwordField").text
+	username = get_parent().get_parent().get_node("username/usernameField").text
+	password = get_parent().get_parent().get_node("password/passwordField").text
 	if username and password != "":
 		disabled = false
 		if Input.is_key_pressed(KEY_ENTER):
