@@ -6,3 +6,7 @@ func _ready() -> void:
 	get_node("Data").visible = false
 	get_node("Confirm Window").visible = false
 	get_node("Settings").visible = false
+
+
+func createAccount() -> void:
+	pass # Replace with function body.

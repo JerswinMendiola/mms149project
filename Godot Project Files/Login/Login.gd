@@ -61,7 +61,6 @@ func _on_Submit_changeUser(newUser) -> void:
 	savedList["accounts"][newUser] = savedList["accounts"][username]
 	savedList["accounts"].erase(username)
 	username = newUser
-	print(savedList)
 	var file = File.new()
 	if file.file_exists(saveFile):
 		file.open(saveFile, File.WRITE)
@@ -69,9 +68,16 @@ func _on_Submit_changeUser(newUser) -> void:
 		file.close()
 
 func _on_Submit_changePass(newPass) -> void:
-	print(username)
 	savedList["accounts"][username] = newPass
 	password = newPass
+	var file = File.new()
+	if file.file_exists(saveFile):
+		file.open(saveFile, File.WRITE)
+		file.store_var(savedList, true)
+		file.close()
+
+func _on_Submit_createAccount(newUser,newPass) -> void:
+	savedList["accounts"][newUser] = newPass
 	print(savedList)
 	var file = File.new()
 	if file.file_exists(saveFile):
