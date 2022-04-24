@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Login/PasswordButton.gd" type="Script" id=2]
@@ -20,6 +20,8 @@
 [ext_resource path="res://Main/Settings/ChangeUsername.gd" type="Script" id=18]
 [ext_resource path="res://Main/Settings/ChangePassword.gd" type="Script" id=19]
 [ext_resource path="res://Main/Settings/CreateAccount.gd" type="Script" id=20]
+[ext_resource path="res://Login/Background.gd" type="Script" id=21]
+[ext_resource path="res://Login/into-success-group-young-freelancers-office-have-conversation-smiling.jpg" type="Texture" id=22]
 
 [sub_resource type="DynamicFont" id=2]
 size = 15
@@ -38,7 +40,6 @@ font_data = ExtResource( 3 )
 script = ExtResource( 5 )
 
 [node name="Login" type="Control" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 1280.0
@@ -47,6 +48,12 @@ theme = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite" type="Sprite" parent="Login"]
+position = Vector2( 636.165, 367.25 )
+scale = Vector2( 0.235821, 0.235821 )
+texture = ExtResource( 22 )
+script = ExtResource( 21 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Login"]
 anchor_left = 0.5
@@ -176,7 +183,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Panel" type="Panel" parent="Login"]
+margin_right = 40.0
+margin_bottom = 40.0
+
 [node name="Main" type="VBoxContainer" parent="."]
+visible = false
 margin_left = 18.0
 margin_top = 19.0
 margin_right = 1262.0
@@ -516,6 +528,7 @@ margin_bottom = 34.0
 script = ExtResource( 10 )
 
 [node name="Settings" type="Node2D" parent="."]
+visible = false
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Settings Background" type="Button" parent="Settings"]
