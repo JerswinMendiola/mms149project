@@ -1,4 +1,5 @@
+tool
 extends Sprite
 
-func _ready():
+func _process(delta: float) -> void:
 	modulate = Color(1,0,0)
