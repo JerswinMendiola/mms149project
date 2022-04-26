@@ -2,12 +2,15 @@ extends Button
 
 func guestSign() -> void:
 	get_tree().current_scene.get_node("Login").visible = false
-	get_tree().current_scene.get_node("Main").visible = true
-	get_tree().current_scene.get_node("Main/HBoxContainer2/Add").visible = false
-	get_tree().current_scene.get_node("Main/ScrollContainer/List/Add").visible = false
-	get_tree().current_scene.get_node("Main/Categories/Settings").visible = false
-	for item in get_tree().current_scene.get_node("Main/ScrollContainer/List").get_children():
-		if item is HBoxContainer:
-			for child in item.get_children():
-				if child is HBoxContainer:
-					child.visible = false
+	get_tree().current_scene.get_node("Main/VBoxContainer/Welcome Panel/HBoxContainer/welcome").text = "Welcome, Guest"
+	Global.loggedUser = "Guest"
+	Global.loggedPassword = "Guest"
+	var main = get_tree().current_scene.get_node("Main/VBoxContainer/Main Panel/Main")
+	var data = get_tree().current_scene.get_node("Main/VBoxContainer/Main Panel/Data")
+	var settings = get_tree().current_scene.get_node("Main/VBoxContainer/Main Panel/Settings")
+	var saveEntry = get_tree().current_scene.get_node("Main/VBoxContainer/Footer Panel/HBoxContainer/Save")
+	get_tree().current_scene.get_node("Main/show/VBoxContainer/VBoxContainer/add").visible = false
+	main.visible = true
+	data.visible = false
+	settings.visible = false
+	saveEntry.visible = false
