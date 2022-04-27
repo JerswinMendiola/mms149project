@@ -1,0 +1,3033 @@
+[gd_scene load_steps=86 format=2]
+
+[ext_resource path="res://Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Login/user-profile.png" type="Texture" id=2]
+[ext_resource path="res://OpenSans-VariableFont_wdth,wght.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Main/file-upload.png" type="Texture" id=4]
+[ext_resource path="res://Login/Hide Show Login.gd" type="Script" id=5]
+[ext_resource path="res://Main/add-user.png" type="Texture" id=6]
+[ext_resource path="res://Main/floppy-disk.png" type="Texture" id=7]
+[ext_resource path="res://Main/calendar.png" type="Texture" id=8]
+[ext_resource path="res://Theme.tres" type="Theme" id=9]
+[ext_resource path="res://ShowHidePassword.gd" type="Script" id=10]
+[ext_resource path="res://Main/Confirm/Confirm Window.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Login/LoginRegister.gd" type="Script" id=12]
+[ext_resource path="res://Login/Guest.gd" type="Script" id=13]
+[ext_resource path="res://Main/menu-button-of-three-horizontal-lines.png" type="Texture" id=14]
+[ext_resource path="res://Main/profile.png" type="Texture" id=15]
+[ext_resource path="res://Main/Settings/Settings Background.gd" type="Script" id=16]
+[ext_resource path="res://Main/Settings/Hidechar.gd" type="Script" id=17]
+[ext_resource path="res://Main/Settings/ChangeUsername.gd" type="Script" id=18]
+[ext_resource path="res://Main/Settings/ChangePassword.gd" type="Script" id=19]
+[ext_resource path="res://Main/Settings/CreateAccount.gd" type="Script" id=20]
+[ext_resource path="res://Main/searh.png" type="Texture" id=21]
+[ext_resource path="res://Login/into-success-group-young-freelancers-office-have-conversation-smiling.jpg" type="Texture" id=22]
+[ext_resource path="res://Login/4921280.jpg" type="Texture" id=23]
+[ext_resource path="res://Login/logo.png" type="Texture" id=24]
+[ext_resource path="res://Login/view.png" type="Texture" id=25]
+[ext_resource path="res://Login/hide.png" type="Texture" id=26]
+[ext_resource path="res://Login/lock.png" type="Texture" id=27]
+[ext_resource path="res://Login/right-arrow.png" type="Texture" id=28]
+[ext_resource path="res://SEGOEUI.TTF" type="DynamicFontData" id=29]
+[ext_resource path="res://Main/delete.png" type="Texture" id=30]
+[ext_resource path="res://Saving System.gd" type="Script" id=31]
+[ext_resource path="res://Main/settings.png" type="Texture" id=32]
+[ext_resource path="res://Start.gd" type="Script" id=33]
+[ext_resource path="res://Main/sidebar.gd" type="Script" id=34]
+[ext_resource path="res://Main/MainPageButtons.gd" type="Script" id=35]
+[ext_resource path="res://Main/profilePicture.gd" type="Script" id=36]
+[ext_resource path="res://Main/Settings/ChangeAccount.gd" type="Script" id=37]
+[ext_resource path="res://Main/Main.gd" type="Script" id=38]
+[ext_resource path="res://Main/Search.gd" type="Script" id=39]
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 1, 0.945098, 0.870588, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=60]
+blend_mode = 3
+
+[sub_resource type="DynamicFont" id=17]
+size = 15
+outline_color = Color( 0.721569, 0.0745098, 0.0941176, 1 )
+use_filter = true
+extra_spacing_top = -4
+extra_spacing_bottom = -1
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=49]
+size = 20
+outline_size = 1
+outline_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=37]
+
+[sub_resource type="StyleBoxEmpty" id=53]
+content_margin_left = 15.0
+content_margin_right = 15.0
+
+[sub_resource type="DynamicFont" id=28]
+size = 20
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+content_margin_left = 57.0
+content_margin_right = 10.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color( 1, 0.980392, 0.941176, 1 )
+draw_center = false
+border_width_bottom = 3
+border_color = Color( 0.686275, 0.12549, 0.105882, 1 )
+
+[sub_resource type="DynamicFont" id=19]
+size = 20
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="StyleBoxFlat" id=20]
+content_margin_left = 18.0
+bg_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+corner_radius_top_left = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=21]
+content_margin_left = 18.0
+bg_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+
+[sub_resource type="StyleBoxFlat" id=22]
+content_margin_left = 18.0
+bg_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+
+[sub_resource type="StyleBoxEmpty" id=36]
+
+[sub_resource type="DynamicFont" id=33]
+size = 33
+outline_size = 1
+outline_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=34]
+use_filter = true
+extra_spacing_char = 1
+font_data = ExtResource( 29 )
+
+[sub_resource type="StyleBoxFlat" id=35]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color( 0, 0, 0, 0.0392157 )
+border_width_bottom = 3
+border_color = Color( 0.686275, 0.12549, 0.105882, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="DynamicFont" id=38]
+size = 14
+outline_color = Color( 0.729412, 0.145098, 0.137255, 1 )
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="ExternalTexture" id=46]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.09256, 0.0832, 0.13, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 1
+shadow_offset = Vector2( 0, 9.841 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.1472, 0.128, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 1
+shadow_offset = Vector2( 0, 9.841 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_bottom = 20.0
+bg_color = Color( 0.686275, 0.12549, 0.105882, 1 )
+corner_radius_top_left = 73
+corner_radius_top_right = 73
+corner_radius_bottom_right = 73
+corner_radius_bottom_left = 73
+shadow_offset = Vector2( 0, 9.841 )
+
+[sub_resource type="DynamicFont" id=39]
+size = 20
+outline_color = Color( 0.505882, 0.505882, 0.505882, 1 )
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=40]
+content_margin_top = 6.0
+
+[sub_resource type="ExternalTexture" id=41]
+
+[sub_resource type="StyleBoxEmpty" id=42]
+
+[sub_resource type="Theme" id=43]
+Button/fonts/font = ExtResource( 1 )
+Button/styles/disabled = SubResource( 3 )
+Button/styles/focus = null
+Button/styles/hover = SubResource( 2 )
+Button/styles/normal = SubResource( 1 )
+Button/styles/pressed = SubResource( 2 )
+LineEdit/colors/font_color = Color( 0.478431, 0.478431, 0.478431, 1 )
+LineEdit/fonts/font = SubResource( 39 )
+LineEdit/styles/normal = SubResource( 35 )
+Panel/styles/panel = SubResource( 4 )
+RichTextLabel/fonts/normal_font = ExtResource( 1 )
+ScrollContainer/styles/bg = SubResource( 40 )
+SpinBox/icons/updown = SubResource( 41 )
+VScrollBar/styles/scroll = SubResource( 42 )
+
+[sub_resource type="ExternalTexture" id=47]
+
+[sub_resource type="StyleBoxFlat" id=59]
+content_margin_left = 20.0
+content_margin_right = 20.0
+content_margin_top = 20.0
+content_margin_bottom = 20.0
+bg_color = Color( 0.88, 0.1672, 0.2266, 1 )
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id=48]
+content_margin_left = 20.0
+content_margin_right = 20.0
+content_margin_top = 20.0
+content_margin_bottom = 20.0
+bg_color = Color( 0.957031, 0.183182, 0.25573, 1 )
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id=31]
+bg_color = Color( 1, 0.976471, 0.945098, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id=32]
+
+[sub_resource type="StyleBoxFlat" id=44]
+bg_color = Color( 0, 0, 0, 0.521569 )
+
+[sub_resource type="DynamicFont" id=45]
+size = 14
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 0.945098, 0.870588, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=12]
+blend_mode = 3
+
+[sub_resource type="DynamicFont" id=51]
+size = 20
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 12
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+
+[sub_resource type="DynamicFont" id=8]
+size = 20
+outline_size = 1
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=9]
+use_filter = true
+font_data = ExtResource( 29 )
+
+[sub_resource type="StyleBoxFlat" id=52]
+content_margin_left = 40.0
+content_margin_right = 40.0
+content_margin_top = 20.0
+content_margin_bottom = 20.0
+bg_color = Color( 0.9, 0.9, 0.9, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.686275, 0.12549, 0.105882, 1 )
+corner_radius_top_left = 37
+corner_radius_top_right = 37
+corner_radius_bottom_right = 37
+corner_radius_bottom_left = 37
+
+[sub_resource type="StyleBoxFlat" id=10]
+content_margin_left = 40.0
+content_margin_right = 40.0
+content_margin_top = 20.0
+content_margin_bottom = 20.0
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.686275, 0.12549, 0.105882, 1 )
+corner_radius_top_left = 37
+corner_radius_top_right = 37
+corner_radius_bottom_right = 37
+corner_radius_bottom_left = 37
+
+[sub_resource type="DynamicFont" id=13]
+size = 12
+use_filter = true
+font_data = ExtResource( 3 )
+
+[node name="Scene" type="Node2D"]
+script = ExtResource( 33 )
+
+[node name="Saving System" type="Node" parent="."]
+script = ExtResource( 31 )
+
+[node name="Main" type="HBoxContainer" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+size_flags_vertical = 3
+theme = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="show" type="Panel" parent="Main"]
+margin_right = 230.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.22
+custom_styles/panel = SubResource( 14 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/show"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 24.0
+margin_top = 17.0
+margin_right = -17.0
+margin_bottom = -17.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/show/VBoxContainer"]
+margin_right = 189.0
+margin_bottom = 36.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.08
+alignment = 2
+
+[node name="-" type="Control" parent="Main/show/VBoxContainer/HBoxContainer"]
+margin_right = 155.0
+margin_bottom = 36.0
+size_flags_horizontal = 3
+
+[node name="menu" type="TextureButton" parent="Main/show/VBoxContainer/HBoxContainer"]
+modulate = Color( 0.721569, 0.113725, 0.105882, 1 )
+margin_left = 159.0
+margin_right = 189.0
+margin_bottom = 36.0
+size_flags_horizontal = 11
+size_flags_stretch_ratio = 0.19
+texture_normal = ExtResource( 14 )
+expand = true
+script = ExtResource( 34 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Main/show/VBoxContainer"]
+margin_top = 40.0
+margin_right = 189.0
+margin_bottom = 226.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.41
+alignment = 1
+
+[node name="-" type="Control" parent="Main/show/VBoxContainer/HBoxContainer2"]
+margin_right = 17.0
+margin_bottom = 186.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.19
+
+[node name="TextureRect" type="TextureRect" parent="Main/show/VBoxContainer/HBoxContainer2"]
+material = SubResource( 60 )
+margin_left = 21.0
+margin_right = 94.0
+margin_bottom = 186.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.8
+texture = ExtResource( 24 )
+expand = true
+stretch_mode = 6
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/show/VBoxContainer/HBoxContainer2"]
+margin_left = 98.0
+margin_top = 67.0
+margin_right = 189.0
+margin_bottom = 118.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource( 9 )
+custom_colors/default_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_fonts/normal_font = SubResource( 17 )
+text = "Employee
+Information
+System"
+fit_content_height = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/show/VBoxContainer"]
+margin_top = 230.0
+margin_right = 189.0
+margin_bottom = 686.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="view" type="HBoxContainer" parent="Main/show/VBoxContainer/VBoxContainer"]
+margin_right = 189.0
+margin_bottom = 28.0
+alignment = 1
+
+[node name="view" type="Button" parent="Main/show/VBoxContainer/VBoxContainer/view"]
+margin_right = 132.0
+margin_bottom = 28.0
+focus_mode = 0
+custom_colors/font_color_focus = Color( 0.721569, 0.105882, 0.101961, 1 )
+custom_colors/font_color = Color( 0.721569, 0.105882, 0.101961, 1 )
+custom_colors/font_color_hover = Color( 0.721569, 0.105882, 0.101961, 1 )
+custom_colors/font_color_pressed = Color( 0.721569, 0.105882, 0.101961, 1 )
+custom_fonts/font = SubResource( 49 )
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 16 )
+enabled_focus_mode = 0
+text = "View Employee"
+align = 0
+script = ExtResource( 35 )
+
+[node name="Control" type="Control" parent="Main/show/VBoxContainer/VBoxContainer/view"]
+margin_left = 136.0
+margin_right = 157.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="Main/show/VBoxContainer/VBoxContainer/view"]
+modulate = Color( 0.721569, 0.113725, 0.105882, 1 )
+margin_left = 161.0
+margin_right = 189.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.28
+texture = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+
+[node name="add" type="HBoxContainer" parent="Main/show/VBoxContainer/VBoxContainer"]
+margin_top = 32.0
+margin_right = 189.0
+margin_bottom = 60.0
+alignment = 1
+
+[node name="add" type="Button" parent="Main/show/VBoxContainer/VBoxContainer/add"]
+margin_right = 128.0
+margin_bottom = 28.0
+focus_mode = 0
+custom_colors/font_color_focus = Color( 0.721569, 0.105882, 0.101961, 1 )
+custom_colors/font_color = Color( 0.721569, 0.105882, 0.101961, 1 )
+custom_colors/font_color_hover = Color( 0.721569, 0.105882, 0.101961, 1 )
+custom_colors/font_color_pressed = Color( 0.721569, 0.105882, 0.101961, 1 )
+custom_fonts/font = SubResource( 49 )
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 16 )
+enabled_focus_mode = 0
+text = "Add Employee"
+align = 0
+script = ExtResource( 35 )
+
+[node name="Control" type="Control" parent="Main/show/VBoxContainer/VBoxContainer/add"]
+margin_left = 132.0
+margin_right = 157.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="Main/show/VBoxContainer/VBoxContainer/add"]
+modulate = Color( 0.721569, 0.113725, 0.105882, 1 )
+margin_left = 161.0
+margin_right = 189.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.1
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+
+[node name="hide" type="Panel" parent="Main"]
+visible = false
+margin_right = 72.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.06
+custom_styles/panel = SubResource( 14 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/hide"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 18.0
+margin_top = 15.0
+margin_right = -18.0
+margin_bottom = -15.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu" type="TextureButton" parent="Main/hide/VBoxContainer"]
+modulate = Color( 0.721569, 0.113725, 0.105882, 1 )
+margin_right = 36.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.06
+texture_normal = ExtResource( 14 )
+expand = true
+script = ExtResource( 34 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="-" type="Control" parent="Main/hide/VBoxContainer"]
+margin_top = 42.0
+margin_right = 36.0
+margin_bottom = 690.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main"]
+margin_left = 234.0
+margin_right = 1280.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+custom_constants/separation = -15
+
+[node name="Welcome Panel" type="Panel" parent="Main/VBoxContainer"]
+margin_right = 1046.0
+margin_bottom = 89.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/VBoxContainer/Welcome Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.06
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="-" type="Control" parent="Main/VBoxContainer/Welcome Panel/HBoxContainer"]
+margin_right = 811.0
+margin_bottom = 89.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.37
+
+[node name="welcome" type="LineEdit" parent="Main/VBoxContainer/Welcome Panel/HBoxContainer"]
+margin_left = 815.0
+margin_top = 20.0
+margin_right = 979.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.93
+custom_colors/font_color_uneditable = Color( 0.686275, 0.12549, 0.105882, 1 )
+custom_styles/read_only = SubResource( 37 )
+text = "Welcome, name"
+editable = false
+expand_to_text_length = true
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+
+[node name="profile picture" type="TextureButton" parent="Main/VBoxContainer/Welcome Panel/HBoxContainer"]
+margin_left = 983.0
+margin_right = 1034.0
+margin_bottom = 89.0
+size_flags_horizontal = 11
+size_flags_vertical = 5
+size_flags_stretch_ratio = 0.34
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 15 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 36 )
+
+[node name="-2" type="Control" parent="Main/VBoxContainer/Welcome Panel/HBoxContainer"]
+margin_left = 1038.0
+margin_right = 1046.0
+margin_bottom = 89.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.05
+
+[node name="Main Panel" type="Panel" parent="Main/VBoxContainer"]
+margin_top = 74.0
+margin_right = 1046.0
+margin_bottom = 634.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 9 )
+
+[node name="Main" type="PanelContainer" parent="Main/VBoxContainer/Main Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 53 )
+script = ExtResource( 38 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Not Empty" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Main"]
+margin_left = 15.0
+margin_right = 1031.0
+margin_bottom = 560.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="search" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Not Empty"]
+margin_right = 1016.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 28 )
+custom_styles/normal = SubResource( 18 )
+placeholder_text = "Search here"
+script = ExtResource( 39 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/search"]
+modulate = Color( 0.721569, 0.113725, 0.105882, 1 )
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 21 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="-" type="Control" parent="Main/VBoxContainer/Main Panel/Main/Not Empty"]
+margin_top = 52.0
+margin_right = 1016.0
+margin_bottom = 61.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.02
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Main/Not Empty"]
+margin_top = 65.0
+margin_right = 1016.0
+margin_bottom = 560.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="categories" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/VBoxContainer"]
+margin_right = 1016.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+custom_constants/separation = 2
+
+[node name="LineEdit" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/VBoxContainer/categories"]
+margin_right = 241.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.24
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 19 )
+custom_styles/read_only = SubResource( 20 )
+text = "Name"
+editable = false
+selecting_enabled = false
+
+[node name="LineEdit2" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/VBoxContainer/categories"]
+margin_left = 243.0
+margin_right = 323.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 19 )
+custom_styles/read_only = SubResource( 21 )
+text = "Age"
+align = 1
+editable = false
+selecting_enabled = false
+
+[node name="LineEdit3" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/VBoxContainer/categories"]
+margin_left = 325.0
+margin_right = 405.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 19 )
+custom_styles/read_only = SubResource( 21 )
+text = "Sex"
+align = 1
+editable = false
+selecting_enabled = false
+
+[node name="LineEdit4" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/VBoxContainer/categories"]
+margin_left = 407.0
+margin_right = 613.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.06
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 19 )
+custom_styles/read_only = SubResource( 21 )
+text = "Employee ID "
+align = 1
+editable = false
+selecting_enabled = false
+
+[node name="LineEdit5" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/VBoxContainer/categories"]
+margin_left = 615.0
+margin_right = 819.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.05
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 19 )
+custom_styles/read_only = SubResource( 21 )
+text = " Department"
+align = 1
+editable = false
+selecting_enabled = false
+
+[node name="settings" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/VBoxContainer/categories"]
+margin_left = 821.0
+margin_right = 1016.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 19 )
+custom_styles/read_only = SubResource( 22 )
+text = " Settings"
+align = 1
+editable = false
+selecting_enabled = false
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/VBoxContainer"]
+margin_top = 52.0
+margin_right = 1016.0
+margin_bottom = 495.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 9 )
+
+[node name="item list" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/VBoxContainer/ScrollContainer"]
+margin_top = 6.0
+margin_right = 1016.0
+margin_bottom = 443.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Empty" type="Panel" parent="Main/VBoxContainer/Main Panel/Main"]
+visible = false
+margin_left = 15.0
+margin_right = 1031.0
+margin_bottom = 560.0
+
+[node name="LineEdit" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Empty"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "No employee records to display."
+align = 1
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Data" type="ScrollContainer" parent="Main/VBoxContainer/Main Panel"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 17.0
+margin_top = 28.0
+margin_right = -17.0
+margin_bottom = -28.0
+custom_styles/bg = SubResource( 36 )
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data"]
+margin_right = 1012.0
+margin_bottom = 730.0
+rect_pivot_offset = Vector2( 476, 536 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 44
+
+[node name="Personal Info" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer"]
+margin_right = 1012.0
+margin_bottom = 334.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info"]
+margin_right = 1012.0
+margin_bottom = 46.0
+size_flags_horizontal = 3
+custom_colors/default_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_fonts/normal_font = SubResource( 33 )
+text = "Personal Information"
+fit_content_height = true
+
+[node name="-" type="Control" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info"]
+margin_top = 50.0
+margin_right = 1012.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info"]
+margin_top = 54.0
+margin_right = 1012.0
+margin_bottom = 334.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 14
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer"]
+margin_right = 328.0
+margin_bottom = 280.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 21
+
+[node name="first name" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer"]
+margin_right = 328.0
+margin_bottom = 43.0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "First Name"
+placeholder_alpha = 1.0
+
+[node name="birthday" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer"]
+margin_top = 64.0
+margin_right = 328.0
+margin_bottom = 132.0
+size_flags_vertical = 5
+custom_constants/separation = -1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/birthday"]
+margin_right = 328.0
+margin_bottom = 21.0
+custom_colors/default_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_fonts/normal_font = SubResource( 38 )
+text = "Date of Birth"
+fit_content_height = true
+
+[node name="LineEdit2" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/birthday"]
+margin_top = 20.0
+margin_right = 328.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 9 )
+
+[node name="month birthday" type="OptionButton" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/birthday/LineEdit2"]
+margin_right = 107.0
+margin_bottom = 48.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.7
+theme = ExtResource( 9 )
+custom_colors/font_color_focus = Color( 0.490196, 0.490196, 0.490196, 1 )
+custom_colors/font_color = Color( 0.490196, 0.490196, 0.490196, 1 )
+custom_colors/font_color_hover = Color( 0.490196, 0.490196, 0.490196, 1 )
+custom_colors/font_color_pressed = Color( 0.490196, 0.490196, 0.490196, 1 )
+custom_fonts/font = SubResource( 34 )
+custom_icons/arrow = SubResource( 46 )
+custom_styles/hover = SubResource( 35 )
+custom_styles/pressed = SubResource( 35 )
+custom_styles/focus = SubResource( 35 )
+custom_styles/normal = SubResource( 35 )
+enabled_focus_mode = 0
+text = "January"
+items = [ "January", null, false, 0, null, "February", null, false, 1, null, "March", null, false, 2, null, "April", null, false, 3, null, "May", null, false, 4, null, "June", null, false, 5, null, "July", null, false, 6, null, "August", null, false, 7, null, "September", null, false, 8, null, "October", null, false, 9, null, "November", null, false, 10, null, "December", null, false, 11, null ]
+selected = 0
+
+[node name="day birthday" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/birthday/LineEdit2"]
+margin_left = 111.0
+margin_right = 192.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme = SubResource( 43 )
+min_value = 1.0
+max_value = 31.0
+value = 1.0
+
+[node name="year birthday" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/birthday/LineEdit2"]
+margin_left = 196.0
+margin_right = 285.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.41
+theme = SubResource( 43 )
+min_value = 1800.0
+max_value = 9999.0
+value = 2022.0
+
+[node name="TextureRect" type="TextureRect" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/birthday/LineEdit2"]
+modulate = Color( 0.686275, 0.12549, 0.105882, 1 )
+margin_left = 289.0
+margin_right = 328.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+size_flags_stretch_ratio = 0.61
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="sex" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer"]
+margin_top = 153.0
+margin_right = 328.0
+margin_bottom = 216.0
+size_flags_vertical = 5
+custom_constants/separation = -1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/sex"]
+margin_right = 328.0
+margin_bottom = 21.0
+custom_colors/default_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_fonts/normal_font = SubResource( 38 )
+text = "Sex"
+fit_content_height = true
+
+[node name="sex" type="OptionButton" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/sex"]
+margin_top = 20.0
+margin_right = 328.0
+margin_bottom = 63.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.7
+theme = ExtResource( 9 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color_focus = Color( 0.490196, 0.490196, 0.490196, 1 )
+custom_colors/font_color = Color( 0.490196, 0.490196, 0.490196, 1 )
+custom_colors/font_color_hover = Color( 0.490196, 0.490196, 0.490196, 1 )
+custom_colors/font_color_pressed = Color( 0.490196, 0.490196, 0.490196, 1 )
+custom_fonts/font = SubResource( 34 )
+custom_icons/arrow = SubResource( 46 )
+custom_styles/hover = SubResource( 35 )
+custom_styles/pressed = SubResource( 35 )
+custom_styles/focus = SubResource( 35 )
+custom_styles/normal = SubResource( 35 )
+enabled_focus_mode = 0
+text = "Male"
+items = [ "Male", null, false, 0, null, "Female", null, false, 1, null ]
+selected = 0
+
+[node name="address" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer"]
+margin_top = 237.0
+margin_right = 328.0
+margin_bottom = 280.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "Address"
+placeholder_alpha = 1.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer"]
+margin_left = 342.0
+margin_right = 670.0
+margin_bottom = 280.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 21
+
+[node name="middle name" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer2"]
+margin_right = 328.0
+margin_bottom = 43.0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "Middle Name"
+placeholder_alpha = 1.0
+
+[node name="place birth" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer2"]
+margin_top = 64.0
+margin_right = 328.0
+margin_bottom = 107.0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "Place of Birth"
+placeholder_alpha = 1.0
+
+[node name="tin" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer2"]
+margin_top = 128.0
+margin_right = 328.0
+margin_bottom = 193.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "TIN"
+placeholder_alpha = 1.0
+
+[node name="sss" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer2"]
+margin_top = 214.0
+margin_right = 328.0
+margin_bottom = 280.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "SSS"
+placeholder_alpha = 1.0
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer"]
+margin_left = 684.0
+margin_right = 1012.0
+margin_bottom = 280.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 21
+
+[node name="last name" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer3"]
+margin_right = 328.0
+margin_bottom = 43.0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "Last Name"
+placeholder_alpha = 1.0
+
+[node name="nationality" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer3"]
+margin_top = 64.0
+margin_right = 328.0
+margin_bottom = 107.0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "Nationality"
+placeholder_alpha = 1.0
+
+[node name="philhealth" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer3"]
+margin_top = 128.0
+margin_right = 328.0
+margin_bottom = 193.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "Philhealth"
+placeholder_alpha = 1.0
+
+[node name="hdmf" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer3"]
+margin_top = 214.0
+margin_right = 328.0
+margin_bottom = 280.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "HDMF"
+placeholder_alpha = 1.0
+
+[node name="Education" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer"]
+margin_top = 378.0
+margin_right = 1012.0
+margin_bottom = 564.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education"]
+margin_right = 1012.0
+margin_bottom = 46.0
+size_flags_horizontal = 3
+custom_colors/default_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_fonts/normal_font = SubResource( 33 )
+text = "Education"
+fit_content_height = true
+
+[node name="-" type="Control" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education"]
+margin_top = 50.0
+margin_right = 1012.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education"]
+margin_top = 54.0
+margin_right = 1012.0
+margin_bottom = 186.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 14
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer"]
+margin_right = 328.0
+margin_bottom = 132.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 21
+
+[node name="educ attainment" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer"]
+margin_right = 328.0
+margin_bottom = 43.0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "Highest Attainment"
+placeholder_alpha = 1.0
+
+[node name="educ attend from" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer"]
+margin_top = 64.0
+margin_right = 328.0
+margin_bottom = 132.0
+size_flags_vertical = 5
+custom_constants/separation = -1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer/educ attend from"]
+margin_right = 328.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 203, -298 )
+custom_colors/default_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_fonts/normal_font = SubResource( 38 )
+text = "Attended from"
+fit_content_height = true
+
+[node name="LineEdit2" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer/educ attend from"]
+margin_top = 20.0
+margin_right = 328.0
+margin_bottom = 68.0
+rect_pivot_offset = Vector2( 40, 37 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 9 )
+
+[node name="educ month from" type="OptionButton" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer/educ attend from/LineEdit2"]
+margin_right = 113.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.7
+custom_colors/font_color = Color( 0.490196, 0.490196, 0.490196, 1 )
+custom_fonts/font = SubResource( 34 )
+custom_icons/arrow = SubResource( 47 )
+custom_styles/normal = SubResource( 35 )
+text = "January"
+items = [ "January", null, false, 0, null, "February", null, false, 1, null, "March", null, false, 2, null, "April", null, false, 3, null, "May", null, false, 4, null, "June", null, false, 5, null, "July", null, false, 6, null, "August", null, false, 7, null, "September", null, false, 8, null, "October", null, false, 9, null, "November", null, false, 10, null, "December", null, false, 11, null ]
+selected = 0
+
+[node name="educ day from" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer/educ attend from/LineEdit2"]
+margin_left = 117.0
+margin_right = 198.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme = SubResource( 43 )
+min_value = 1.0
+max_value = 31.0
+value = 1.0
+
+[node name="educ year from" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer/educ attend from/LineEdit2"]
+margin_left = 202.0
+margin_right = 283.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource( 43 )
+min_value = 1800.0
+max_value = 9999.0
+value = 2022.0
+
+[node name="TextureRect" type="TextureRect" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer/educ attend from/LineEdit2"]
+modulate = Color( 0.686275, 0.12549, 0.105882, 1 )
+margin_left = 287.0
+margin_right = 328.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+size_flags_stretch_ratio = 0.61
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer"]
+margin_left = 342.0
+margin_right = 670.0
+margin_bottom = 132.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 21
+
+[node name="school name" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2"]
+margin_right = 328.0
+margin_bottom = 43.0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "School Name"
+placeholder_alpha = 1.0
+
+[node name="educ attend to" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2"]
+margin_top = 64.0
+margin_right = 328.0
+margin_bottom = 132.0
+size_flags_vertical = 5
+custom_constants/separation = -1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2/educ attend to"]
+margin_right = 328.0
+margin_bottom = 21.0
+custom_colors/default_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_fonts/normal_font = SubResource( 38 )
+text = "Attended to "
+fit_content_height = true
+
+[node name="LineEdit2" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2/educ attend to"]
+margin_top = 20.0
+margin_right = 328.0
+margin_bottom = 68.0
+rect_pivot_offset = Vector2( 200, 37 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 9 )
+
+[node name="educ month to" type="OptionButton" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2/educ attend to/LineEdit2"]
+margin_right = 113.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.7
+custom_colors/font_color = Color( 0.490196, 0.490196, 0.490196, 1 )
+custom_fonts/font = SubResource( 34 )
+custom_icons/arrow = SubResource( 46 )
+custom_styles/normal = SubResource( 35 )
+text = "January"
+items = [ "January", null, false, 0, null, "February", null, false, 1, null, "March", null, false, 2, null, "April", null, false, 3, null, "May", null, false, 4, null, "June", null, false, 5, null, "July", null, false, 6, null, "August", null, false, 7, null, "September", null, false, 8, null, "October", null, false, 9, null, "November", null, false, 10, null, "December", null, false, 11, null ]
+selected = 0
+
+[node name="educ day to" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2/educ attend to/LineEdit2"]
+margin_left = 117.0
+margin_right = 198.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme = SubResource( 43 )
+min_value = 1.0
+max_value = 31.0
+value = 1.0
+
+[node name="educ year to" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2/educ attend to/LineEdit2"]
+margin_left = 202.0
+margin_right = 283.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource( 43 )
+min_value = 1800.0
+max_value = 9999.0
+value = 2022.0
+
+[node name="TextureRect" type="TextureRect" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2/educ attend to/LineEdit2"]
+modulate = Color( 0.686275, 0.12549, 0.105882, 1 )
+margin_left = 287.0
+margin_right = 328.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+size_flags_stretch_ratio = 0.61
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer"]
+margin_left = 684.0
+margin_right = 1012.0
+margin_bottom = 132.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 21
+
+[node name="Employment" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer"]
+margin_top = 608.0
+margin_right = 1012.0
+margin_bottom = 730.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment"]
+margin_right = 1012.0
+margin_bottom = 46.0
+size_flags_horizontal = 3
+custom_colors/default_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_fonts/normal_font = SubResource( 33 )
+text = "Employment Details"
+fit_content_height = true
+
+[node name="-" type="Control" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment"]
+margin_top = 50.0
+margin_right = 1012.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment"]
+margin_top = 54.0
+margin_right = 1012.0
+margin_bottom = 122.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 14
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer"]
+margin_right = 328.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+
+[node name="-" type="Control" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer"]
+margin_right = 328.0
+
+[node name="emp position" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer"]
+margin_top = 20.0
+margin_right = 328.0
+margin_bottom = 63.0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "Position"
+placeholder_alpha = 1.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer"]
+margin_left = 342.0
+margin_right = 670.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+
+[node name="-" type="Control" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer2"]
+margin_right = 328.0
+
+[node name="department" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer2"]
+margin_top = 20.0
+margin_right = 328.0
+margin_bottom = 63.0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "Department"
+placeholder_alpha = 1.0
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer"]
+margin_left = 684.0
+margin_right = 1012.0
+margin_bottom = 68.0
+rect_pivot_offset = Vector2( -303, 130 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 21
+
+[node name="emp attended" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3"]
+margin_right = 328.0
+margin_bottom = 68.0
+size_flags_vertical = 5
+custom_constants/separation = -1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3/emp attended"]
+margin_right = 328.0
+margin_bottom = 21.0
+custom_colors/default_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_fonts/normal_font = SubResource( 38 )
+text = "Attended to "
+fit_content_height = true
+
+[node name="LineEdit2" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3/emp attended"]
+margin_top = 20.0
+margin_right = 328.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 9 )
+
+[node name="employ month" type="OptionButton" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3/emp attended/LineEdit2"]
+margin_right = 113.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.7
+custom_colors/font_color = Color( 0.490196, 0.490196, 0.490196, 1 )
+custom_fonts/font = SubResource( 34 )
+custom_icons/arrow = SubResource( 46 )
+custom_styles/normal = SubResource( 35 )
+text = "January"
+items = [ "January", null, false, 0, null, "February", null, false, 1, null, "March", null, false, 2, null, "April", null, false, 3, null, "May", null, false, 4, null, "June", null, false, 5, null, "July", null, false, 6, null, "August", null, false, 7, null, "September", null, false, 8, null, "October", null, false, 9, null, "November", null, false, 10, null, "December", null, false, 11, null ]
+selected = 0
+
+[node name="employ day" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3/emp attended/LineEdit2"]
+margin_left = 117.0
+margin_right = 198.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme = SubResource( 43 )
+min_value = 1.0
+max_value = 31.0
+value = 1.0
+
+[node name="employ year" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3/emp attended/LineEdit2"]
+margin_left = 202.0
+margin_right = 283.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource( 43 )
+min_value = 1800.0
+max_value = 9999.0
+value = 2022.0
+
+[node name="TextureRect" type="TextureRect" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3/emp attended/LineEdit2"]
+modulate = Color( 0.686275, 0.12549, 0.105882, 1 )
+margin_left = 287.0
+margin_right = 328.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+size_flags_stretch_ratio = 0.61
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="Settings" type="ScrollContainer" parent="Main/VBoxContainer/Main Panel"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 17.0
+margin_top = 28.0
+margin_right = -17.0
+margin_bottom = -28.0
+custom_styles/bg = SubResource( 36 )
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Settings"]
+margin_right = 1012.0
+margin_bottom = 966.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2"]
+margin_right = 1012.0
+margin_bottom = 966.0
+rect_pivot_offset = Vector2( 476, 536 )
+size_flags_horizontal = 3
+custom_constants/separation = 44
+
+[node name="Change Username" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer"]
+margin_right = 1012.0
+margin_bottom = 314.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Username"]
+margin_right = 1012.0
+margin_bottom = 46.0
+size_flags_horizontal = 3
+custom_colors/default_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_fonts/normal_font = SubResource( 33 )
+text = "Change Username"
+fit_content_height = true
+
+[node name="Control" type="Control" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Username"]
+margin_top = 50.0
+margin_right = 1012.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Username"]
+margin_top = 54.0
+margin_right = 1012.0
+margin_bottom = 314.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 14
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Username/HBoxContainer"]
+margin_right = 499.0
+margin_bottom = 260.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 21
+
+[node name="old username" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Username/HBoxContainer/VBoxContainer"]
+margin_right = 499.0
+margin_bottom = 43.0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "Enter Old Username"
+placeholder_alpha = 1.0
+
+[node name="new username" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Username/HBoxContainer/VBoxContainer"]
+margin_top = 64.0
+margin_right = 499.0
+margin_bottom = 107.0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "Enter New Username"
+placeholder_alpha = 1.0
+
+[node name="confirm username" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Username/HBoxContainer/VBoxContainer"]
+margin_top = 128.0
+margin_right = 499.0
+margin_bottom = 171.0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "Confirm New Username"
+placeholder_alpha = 1.0
+
+[node name="invalid" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Username/HBoxContainer/VBoxContainer"]
+visible = false
+margin_top = 192.0
+margin_right = 499.0
+margin_bottom = 221.0
+custom_colors/default_color = Color( 0.686275, 0.12549, 0.105882, 1 )
+text = "Invalid information. Please try again."
+fit_content_height = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Username/HBoxContainer/VBoxContainer"]
+margin_top = 192.0
+margin_right = 499.0
+margin_bottom = 260.0
+
+[node name="-" type="Control" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Username/HBoxContainer/VBoxContainer/HBoxContainer"]
+margin_right = 328.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 9.82
+
+[node name="Save" type="Button" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Username/HBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 332.0
+margin_right = 499.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.98
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 59 )
+custom_styles/pressed = SubResource( 48 )
+custom_styles/normal = SubResource( 48 )
+text = "Save"
+icon = ExtResource( 7 )
+expand_icon = true
+script = ExtResource( 37 )
+
+[node name="-" type="Control" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Username/HBoxContainer"]
+margin_left = 513.0
+margin_right = 1012.0
+margin_bottom = 260.0
+size_flags_horizontal = 3
+
+[node name="Change Password" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer"]
+margin_top = 358.0
+margin_right = 1012.0
+margin_bottom = 672.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Password"]
+margin_right = 1012.0
+margin_bottom = 46.0
+size_flags_horizontal = 3
+custom_colors/default_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_fonts/normal_font = SubResource( 33 )
+text = "Change Password"
+fit_content_height = true
+
+[node name="Control" type="Control" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Password"]
+margin_top = 50.0
+margin_right = 1012.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Password"]
+margin_top = 54.0
+margin_right = 1012.0
+margin_bottom = 314.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 14
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Password/HBoxContainer"]
+margin_right = 499.0
+margin_bottom = 260.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 21
+
+[node name="old password" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Password/HBoxContainer/VBoxContainer"]
+margin_right = 499.0
+margin_bottom = 43.0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "Enter Old Password"
+placeholder_alpha = 1.0
+
+[node name="new password" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Password/HBoxContainer/VBoxContainer"]
+margin_top = 64.0
+margin_right = 499.0
+margin_bottom = 107.0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "Enter New Password"
+placeholder_alpha = 1.0
+
+[node name="confirm password" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Password/HBoxContainer/VBoxContainer"]
+margin_top = 128.0
+margin_right = 499.0
+margin_bottom = 171.0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "Confirm New Password"
+placeholder_alpha = 1.0
+
+[node name="invalid" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Password/HBoxContainer/VBoxContainer"]
+visible = false
+margin_top = 192.0
+margin_right = 499.0
+margin_bottom = 221.0
+custom_colors/default_color = Color( 0.686275, 0.12549, 0.105882, 1 )
+text = "Invalid information. Please try again."
+fit_content_height = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Password/HBoxContainer/VBoxContainer"]
+margin_top = 192.0
+margin_right = 499.0
+margin_bottom = 260.0
+
+[node name="-" type="Control" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Password/HBoxContainer/VBoxContainer/HBoxContainer"]
+margin_right = 328.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 9.82
+
+[node name="Save" type="Button" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Password/HBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 332.0
+margin_right = 499.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.98
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 59 )
+custom_styles/pressed = SubResource( 48 )
+custom_styles/normal = SubResource( 48 )
+text = "Save"
+icon = ExtResource( 7 )
+expand_icon = true
+script = ExtResource( 37 )
+
+[node name="-" type="Control" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Password/HBoxContainer"]
+margin_left = 513.0
+margin_right = 1012.0
+margin_bottom = 260.0
+size_flags_horizontal = 3
+
+[node name="Delete Account" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer"]
+margin_top = 716.0
+margin_right = 1012.0
+margin_bottom = 966.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Delete Account"]
+margin_right = 1012.0
+margin_bottom = 46.0
+size_flags_horizontal = 3
+custom_colors/default_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_fonts/normal_font = SubResource( 33 )
+text = "Delete Current Account"
+fit_content_height = true
+
+[node name="Control" type="Control" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Delete Account"]
+margin_top = 50.0
+margin_right = 1012.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Delete Account"]
+margin_top = 54.0
+margin_right = 1012.0
+margin_bottom = 250.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 14
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Delete Account/HBoxContainer"]
+margin_right = 499.0
+margin_bottom = 196.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 21
+
+[node name="delete username" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Delete Account/HBoxContainer/VBoxContainer"]
+margin_right = 499.0
+margin_bottom = 43.0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "Enter Username"
+placeholder_alpha = 1.0
+
+[node name="delete password" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Delete Account/HBoxContainer/VBoxContainer"]
+margin_top = 64.0
+margin_right = 499.0
+margin_bottom = 107.0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_fonts/font = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+placeholder_text = "Enter Password"
+placeholder_alpha = 1.0
+
+[node name="invalid" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Delete Account/HBoxContainer/VBoxContainer"]
+visible = false
+margin_top = 128.0
+margin_right = 499.0
+margin_bottom = 157.0
+custom_colors/default_color = Color( 0.686275, 0.12549, 0.105882, 1 )
+text = "Invalid information. Please try again."
+fit_content_height = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Delete Account/HBoxContainer/VBoxContainer"]
+margin_top = 128.0
+margin_right = 499.0
+margin_bottom = 196.0
+
+[node name="-" type="Control" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Delete Account/HBoxContainer/VBoxContainer/HBoxContainer"]
+margin_right = 328.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 9.82
+
+[node name="delete" type="Button" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Delete Account/HBoxContainer/VBoxContainer/HBoxContainer"]
+margin_left = 332.0
+margin_right = 499.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.98
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 59 )
+custom_styles/pressed = SubResource( 48 )
+custom_styles/normal = SubResource( 48 )
+text = "Delete"
+icon = ExtResource( 30 )
+expand_icon = true
+script = ExtResource( 37 )
+
+[node name="-" type="Control" parent="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Delete Account/HBoxContainer"]
+margin_left = 513.0
+margin_right = 1012.0
+margin_bottom = 196.0
+size_flags_horizontal = 3
+
+[node name="Footer Panel" type="Panel" parent="Main/VBoxContainer"]
+margin_top = 619.0
+margin_right = 1046.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.18
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/VBoxContainer/Footer Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 18.0
+margin_top = 18.0
+margin_right = -18.0
+margin_bottom = -18.0
+custom_constants/separation = 0
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="-2" type="Control" parent="Main/VBoxContainer/Footer Panel/HBoxContainer"]
+margin_right = 702.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 15.36
+
+[node name="Save" type="Button" parent="Main/VBoxContainer/Footer Panel/HBoxContainer"]
+margin_left = 702.0
+margin_right = 930.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.98
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 59 )
+custom_styles/pressed = SubResource( 48 )
+custom_styles/normal = SubResource( 48 )
+text = "Save"
+icon = ExtResource( 7 )
+expand_icon = true
+script = ExtResource( 35 )
+
+[node name="-3" type="Control" parent="Main/VBoxContainer/Footer Panel/HBoxContainer"]
+margin_left = 930.0
+margin_right = 1010.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.74
+
+[node name="ProfileSettings" type="Polygon2D" parent="Main"]
+visible = false
+position = Vector2( -67, 3 )
+color = Color( 1, 0.976471, 0.945098, 1 )
+polygon = PoolVector2Array( 1305, 72, 1321, 95, 1289, 95 )
+
+[node name="Panel4" type="Panel" parent="Main/ProfileSettings"]
+margin_left = 1200.0
+margin_top = 93.0
+margin_right = 1336.0
+margin_bottom = 204.0
+custom_styles/panel = SubResource( 31 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/ProfileSettings/Panel4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 14.0
+margin_top = 15.0
+margin_right = -14.0
+margin_bottom = -15.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="logout" type="HBoxContainer" parent="Main/ProfileSettings/Panel4/VBoxContainer"]
+margin_right = 108.0
+margin_bottom = 28.0
+
+[node name="logout" type="Button" parent="Main/ProfileSettings/Panel4/VBoxContainer/logout"]
+margin_right = 63.0
+margin_bottom = 28.0
+custom_colors/font_color_focus = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_colors/font_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_colors/font_color_hover = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_colors/font_color_pressed = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/normal = SubResource( 32 )
+text = "Logout"
+script = ExtResource( 35 )
+
+[node name="Control" type="Control" parent="Main/ProfileSettings/Panel4/VBoxContainer/logout"]
+margin_left = 67.0
+margin_right = 76.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="logout2" type="TextureButton" parent="Main/ProfileSettings/Panel4/VBoxContainer/logout"]
+margin_left = 80.0
+margin_right = 108.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.99
+texture_normal = ExtResource( 4 )
+expand = true
+stretch_mode = 4
+
+[node name="settings" type="HBoxContainer" parent="Main/ProfileSettings/Panel4/VBoxContainer"]
+margin_top = 32.0
+margin_right = 108.0
+margin_bottom = 60.0
+
+[node name="settings" type="Button" parent="Main/ProfileSettings/Panel4/VBoxContainer/settings"]
+margin_right = 71.0
+margin_bottom = 28.0
+custom_colors/font_color_focus = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_colors/font_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_colors/font_color_hover = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_colors/font_color_pressed = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/focus = SubResource( 32 )
+custom_styles/normal = SubResource( 32 )
+text = "Settings"
+script = ExtResource( 35 )
+
+[node name="Control" type="Control" parent="Main/ProfileSettings/Panel4/VBoxContainer/settings"]
+margin_left = 75.0
+margin_right = 76.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="settings3" type="TextureButton" parent="Main/ProfileSettings/Panel4/VBoxContainer/settings"]
+margin_left = 80.0
+margin_right = 108.0
+margin_bottom = 28.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.99
+texture_normal = ExtResource( 32 )
+expand = true
+stretch_mode = 4
+
+[node name="Logo" type="Sprite" parent="."]
+position = Vector2( 1225, 669 )
+scale = Vector2( 0.0750853, 0.0750853 )
+texture = ExtResource( 24 )
+
+[node name="SavingSystem" type="Node" parent="."]
+
+[node name="Settings" type="Node2D" parent="."]
+visible = false
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Settings Background" type="Button" parent="Settings"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 2560.0
+margin_bottom = 1440.0
+focus_mode = 0
+theme = ExtResource( 9 )
+custom_styles/hover = SubResource( 44 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/normal = SubResource( 44 )
+enabled_focus_mode = 0
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Settings/Settings Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 974.0
+margin_top = 148.0
+margin_right = -974.0
+margin_bottom = -148.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/Settings Background/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Settings/Settings Background/Panel/VBoxContainer"]
+margin_right = 592.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 1 )
+text = "SETTINGS"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Change Username" type="VBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer"]
+margin_top = 34.0
+margin_right = 592.0
+margin_bottom = 356.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer/Change Username"]
+margin_right = 592.0
+margin_bottom = 92.0
+
+[node name="LineEdit" type="LineEdit" parent="Settings/Settings Background/Panel/VBoxContainer/Change Username/VBoxContainer2"]
+margin_right = 592.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+text = "ENTER OLD USERNAME:"
+editable = false
+selecting_enabled = false
+
+[node name="old username field" type="LineEdit" parent="Settings/Settings Background/Panel/VBoxContainer/Change Username/VBoxContainer2"]
+margin_top = 48.0
+margin_right = 592.0
+margin_bottom = 92.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer/Change Username"]
+margin_top = 96.0
+margin_right = 592.0
+margin_bottom = 188.0
+
+[node name="LineEdit" type="LineEdit" parent="Settings/Settings Background/Panel/VBoxContainer/Change Username/VBoxContainer3"]
+margin_right = 592.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+text = "ENTER NEW USERNAME:"
+editable = false
+selecting_enabled = false
+
+[node name="new username field" type="LineEdit" parent="Settings/Settings Background/Panel/VBoxContainer/Change Username/VBoxContainer3"]
+margin_top = 48.0
+margin_right = 592.0
+margin_bottom = 92.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer/Change Username"]
+margin_top = 192.0
+margin_right = 592.0
+margin_bottom = 284.0
+
+[node name="LineEdit" type="LineEdit" parent="Settings/Settings Background/Panel/VBoxContainer/Change Username/VBoxContainer4"]
+margin_right = 592.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+text = "CONFIRM NEW USERNAME:"
+editable = false
+selecting_enabled = false
+
+[node name="confirm username field" type="LineEdit" parent="Settings/Settings Background/Panel/VBoxContainer/Change Username/VBoxContainer4"]
+margin_top = 48.0
+margin_right = 592.0
+margin_bottom = 92.0
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer/Change Username"]
+margin_top = 288.0
+margin_right = 592.0
+margin_bottom = 322.0
+alignment = 2
+
+[node name="warning" type="RichTextLabel" parent="Settings/Settings Background/Panel/VBoxContainer/Change Username/HBoxContainer"]
+margin_right = 334.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.32
+custom_fonts/normal_font = SubResource( 45 )
+text = "INCORRECT INFORMATION, PLEASE TRY AGAIN."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Submit" type="Button" parent="Settings/Settings Background/Panel/VBoxContainer/Change Username/HBoxContainer"]
+margin_left = 338.0
+margin_right = 592.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+text = "SUBMIT"
+script = ExtResource( 18 )
+
+[node name="Control" type="Control" parent="Settings/Settings Background/Panel/VBoxContainer"]
+margin_top = 360.0
+margin_right = 592.0
+margin_bottom = 390.0
+size_flags_vertical = 3
+
+[node name="Change Password" type="VBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer"]
+margin_top = 394.0
+margin_right = 592.0
+margin_bottom = 720.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password"]
+margin_right = 592.0
+margin_bottom = 92.0
+
+[node name="LineEdit" type="LineEdit" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password/VBoxContainer2"]
+margin_right = 592.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+text = "ENTER OLD PASSWORD:"
+editable = false
+selecting_enabled = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password/VBoxContainer2"]
+margin_top = 48.0
+margin_right = 592.0
+margin_bottom = 92.0
+
+[node name="old password field" type="LineEdit" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password/VBoxContainer2/HBoxContainer"]
+margin_right = 438.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+secret = true
+
+[node name="hide" type="Button" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password/VBoxContainer2/HBoxContainer"]
+margin_left = 442.0
+margin_right = 592.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.34
+toggle_mode = true
+text = "SHOW"
+script = ExtResource( 17 )
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password"]
+margin_top = 96.0
+margin_right = 592.0
+margin_bottom = 188.0
+
+[node name="LineEdit" type="LineEdit" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password/VBoxContainer3"]
+margin_right = 592.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+text = "ENTER NEW PASSWORD:"
+editable = false
+selecting_enabled = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password/VBoxContainer3"]
+margin_top = 48.0
+margin_right = 592.0
+margin_bottom = 92.0
+
+[node name="new password field" type="LineEdit" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password/VBoxContainer3/HBoxContainer"]
+margin_right = 438.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+secret = true
+
+[node name="hide" type="Button" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password/VBoxContainer3/HBoxContainer"]
+margin_left = 442.0
+margin_right = 592.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.34
+toggle_mode = true
+text = "SHOW"
+script = ExtResource( 17 )
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password"]
+margin_top = 192.0
+margin_right = 592.0
+margin_bottom = 284.0
+
+[node name="LineEdit" type="LineEdit" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password/VBoxContainer4"]
+margin_right = 592.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+text = "CONFIRM NEW PASSWORD:"
+editable = false
+selecting_enabled = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password/VBoxContainer4"]
+margin_top = 48.0
+margin_right = 592.0
+margin_bottom = 92.0
+
+[node name="confirm password field" type="LineEdit" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password/VBoxContainer4/HBoxContainer"]
+margin_right = 438.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+secret = true
+
+[node name="hide" type="Button" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password/VBoxContainer4/HBoxContainer"]
+margin_left = 442.0
+margin_right = 592.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.34
+toggle_mode = true
+text = "SHOW"
+script = ExtResource( 17 )
+
+[node name="Control" type="Control" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password"]
+margin_top = 288.0
+margin_right = 592.0
+margin_bottom = 288.0
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password"]
+margin_top = 292.0
+margin_right = 592.0
+margin_bottom = 326.0
+alignment = 2
+
+[node name="warning" type="RichTextLabel" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password/HBoxContainer"]
+margin_right = 334.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.32
+custom_fonts/normal_font = SubResource( 45 )
+text = "INCORRECT INFORMATION, PLEASE TRY AGAIN."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Submit" type="Button" parent="Settings/Settings Background/Panel/VBoxContainer/Change Password/HBoxContainer"]
+margin_left = 338.0
+margin_right = 592.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+text = "SUBMIT"
+script = ExtResource( 19 )
+
+[node name="Control2" type="Control" parent="Settings/Settings Background/Panel/VBoxContainer"]
+margin_top = 724.0
+margin_right = 592.0
+margin_bottom = 755.0
+size_flags_vertical = 3
+
+[node name="Create Account" type="VBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer"]
+margin_top = 759.0
+margin_right = 592.0
+margin_bottom = 1124.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account"]
+margin_right = 592.0
+margin_bottom = 35.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 1 )
+text = "CREATE NEW ACCOUNT:"
+fit_content_height = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account"]
+margin_top = 39.0
+margin_right = 592.0
+margin_bottom = 131.0
+
+[node name="LineEdit" type="LineEdit" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account/VBoxContainer2"]
+margin_right = 592.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+text = "CREATE NEW USERNAME:"
+editable = false
+selecting_enabled = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account/VBoxContainer2"]
+margin_top = 48.0
+margin_right = 592.0
+margin_bottom = 92.0
+
+[node name="create username" type="LineEdit" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account/VBoxContainer2/HBoxContainer"]
+margin_right = 592.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account"]
+margin_top = 135.0
+margin_right = 592.0
+margin_bottom = 227.0
+
+[node name="LineEdit" type="LineEdit" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account/VBoxContainer3"]
+margin_right = 592.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+text = "CREATE NEW PASSWORD:"
+editable = false
+selecting_enabled = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account/VBoxContainer3"]
+margin_top = 48.0
+margin_right = 592.0
+margin_bottom = 92.0
+
+[node name="create password" type="LineEdit" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account/VBoxContainer3/HBoxContainer"]
+margin_right = 438.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+secret = true
+
+[node name="hide" type="Button" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account/VBoxContainer3/HBoxContainer"]
+margin_left = 442.0
+margin_right = 592.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.34
+toggle_mode = true
+text = "SHOW"
+script = ExtResource( 17 )
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account"]
+margin_top = 231.0
+margin_right = 592.0
+margin_bottom = 323.0
+
+[node name="LineEdit" type="LineEdit" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account/VBoxContainer4"]
+margin_right = 592.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+text = "CONFIRM PASSWORD:"
+editable = false
+selecting_enabled = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account/VBoxContainer4"]
+margin_top = 48.0
+margin_right = 592.0
+margin_bottom = 92.0
+
+[node name="confirm create password" type="LineEdit" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account/VBoxContainer4/HBoxContainer"]
+margin_right = 438.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+secret = true
+
+[node name="hide" type="Button" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account/VBoxContainer4/HBoxContainer"]
+margin_left = 442.0
+margin_right = 592.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.34
+toggle_mode = true
+text = "SHOW"
+script = ExtResource( 17 )
+
+[node name="Control" type="Control" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account"]
+margin_top = 327.0
+margin_right = 592.0
+margin_bottom = 327.0
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account"]
+margin_top = 331.0
+margin_right = 592.0
+margin_bottom = 365.0
+alignment = 2
+
+[node name="warning" type="RichTextLabel" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account/HBoxContainer"]
+margin_right = 334.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.32
+custom_fonts/normal_font = SubResource( 45 )
+text = "INCORRECT INFORMATION, PLEASE TRY AGAIN."
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Submit" type="Button" parent="Settings/Settings Background/Panel/VBoxContainer/Create Account/HBoxContainer"]
+margin_left = 338.0
+margin_right = 592.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+text = "SUBMIT"
+script = ExtResource( 20 )
+
+[node name="Confirm" type="Control" parent="."]
+visible = false
+margin_right = 1280.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Confirm Window" parent="Confirm" instance=ExtResource( 11 )]
+anchor_top = 0.0
+anchor_bottom = 1.0
+margin_left = 92.0
+margin_top = 282.0
+margin_right = -92.0
+margin_bottom = -282.0
+
+[node name="HBoxContainer" parent="Confirm/Confirm Window/VBoxContainer" index="0"]
+margin_top = 7.0
+margin_right = 1056.0
+margin_bottom = 36.0
+
+[node name="RichTextLabel" parent="Confirm/Confirm Window/VBoxContainer/HBoxContainer" index="0"]
+margin_right = 1056.0
+
+[node name="HBoxContainer3" parent="Confirm/Confirm Window/VBoxContainer" index="1"]
+margin_top = 40.0
+margin_right = 1056.0
+margin_bottom = 108.0
+
+[node name="Yes" parent="Confirm/Confirm Window/VBoxContainer/HBoxContainer3" index="0"]
+margin_right = 526.0
+
+[node name="No" parent="Confirm/Confirm Window/VBoxContainer/HBoxContainer3" index="1"]
+margin_left = 530.0
+margin_right = 1056.0
+
+[node name="Login" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1280.0
+margin_bottom = 720.0
+theme = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Login"]
+modulate = Color( 0.666667, 0.207843, 0.207843, 1 )
+position = Vector2( 638.165, 370.701 )
+scale = Vector2( 0.251012, 0.249438 )
+texture = ExtResource( 22 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Login"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 155.0
+margin_top = 94.0
+margin_right = -153.0
+margin_bottom = -94.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Login/HBoxContainer"]
+margin_right = 525.0
+margin_bottom = 532.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.19
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4921280" type="Sprite" parent="Login/HBoxContainer/Panel"]
+position = Vector2( 261.75, 289.5 )
+scale = Vector2( 0.1705, 0.1705 )
+texture = ExtResource( 23 )
+
+[node name="Logo" type="Sprite" parent="Login/HBoxContainer/Panel"]
+material = SubResource( 12 )
+position = Vector2( 49.6747, 49 )
+scale = Vector2( 0.0750853, 0.0750853 )
+texture = ExtResource( 24 )
+
+[node name="Panel2" type="Panel" parent="Login/HBoxContainer"]
+margin_left = 529.0
+margin_right = 972.0
+margin_bottom = 532.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D" type="Node2D" parent="Login/HBoxContainer/Panel2"]
+position = Vector2( 40, 56 )
+scale = Vector2( 0.811149, 0.811149 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Login/HBoxContainer/Panel2/Node2D"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 24.0
+margin_top = 125.0
+margin_right = 418.0
+margin_bottom = 407.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Login" type="Control" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer"]
+margin_right = 394.0
+margin_bottom = 282.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="username" type="HBoxContainer" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer"]
+margin_right = 394.0
+margin_bottom = 48.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/username"]
+modulate = Color( 0.686275, 0.12549, 0.105882, 1 )
+margin_right = 47.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.14
+texture = ExtResource( 2 )
+expand = true
+
+[node name="usernameField" type="LineEdit" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/username"]
+margin_left = 51.0
+margin_right = 394.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.02
+custom_colors/selection_color = Color( 0.168627, 0.168627, 0.168627, 1 )
+custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.168627, 0.168627, 0.168627, 1 )
+custom_fonts/font = SubResource( 51 )
+placeholder_text = "User Name"
+
+[node name="password" type="HBoxContainer" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer"]
+margin_top = 52.0
+margin_right = 394.0
+margin_bottom = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/password"]
+modulate = Color( 0.686275, 0.12549, 0.105882, 1 )
+margin_right = 47.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.14
+texture = ExtResource( 27 )
+expand = true
+
+[node name="passwordField" type="LineEdit" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/password"]
+margin_left = 51.0
+margin_right = 394.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.02
+custom_colors/selection_color = Color( 0.168627, 0.168627, 0.168627, 1 )
+custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.168627, 0.168627, 0.168627, 1 )
+custom_fonts/font = SubResource( 51 )
+secret = true
+secret_character = "•"
+placeholder_text = "Password"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="showPassword" type="TextureButton" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/password/passwordField"]
+modulate = Color( 0.686275, 0.12549, 0.105882, 1 )
+margin_left = 299.0
+margin_top = 5.0
+margin_right = 339.0
+margin_bottom = 45.0
+toggle_mode = true
+texture_normal = ExtResource( 25 )
+texture_pressed = ExtResource( 26 )
+expand = true
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="invalid" type="RichTextLabel" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer"]
+margin_top = 104.0
+margin_right = 394.0
+margin_bottom = 122.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.26
+custom_colors/default_color = Color( 0.686275, 0.12549, 0.105882, 1 )
+custom_fonts/normal_font = SubResource( 11 )
+text = "Incorrect Username/Password. Please try again."
+fit_content_height = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer"]
+margin_top = 126.0
+margin_right = 394.0
+margin_bottom = 194.0
+
+[node name="register" type="Button" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/HBoxContainer"]
+margin_right = 209.0
+margin_bottom = 68.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+custom_colors/font_color = Color( 0.686275, 0.12549, 0.105882, 1 )
+custom_colors/font_color_hover = Color( 0.54, 0.0963, 0.081, 1 )
+custom_colors/font_color_pressed = Color( 0.686275, 0.12549, 0.105882, 1 )
+custom_fonts/font = SubResource( 6 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 7 )
+enabled_focus_mode = 0
+text = "No Account yet? Register here"
+flat = true
+align = 0
+expand_icon = true
+script = ExtResource( 5 )
+
+[node name="-" type="Control" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/HBoxContainer"]
+margin_left = 213.0
+margin_right = 230.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.11
+
+[node name="login" type="Button" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/HBoxContainer"]
+margin_left = 234.0
+margin_right = 394.0
+margin_bottom = 68.0
+focus_mode = 0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 8 )
+enabled_focus_mode = 0
+text = "Login"
+align = 0
+expand_icon = true
+script = ExtResource( 12 )
+
+[node name="TextureRect" type="TextureRect" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/HBoxContainer/login"]
+modulate = Color( 1, 0.945098, 0.870588, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 125.0
+margin_top = 18.0
+margin_right = -7.0
+margin_bottom = -18.0
+texture = ExtResource( 28 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="-" type="Control" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer"]
+margin_top = 198.0
+margin_right = 394.0
+margin_bottom = 215.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GUEST" type="Button" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer"]
+margin_left = 94.0
+margin_top = 219.0
+margin_right = 300.0
+margin_bottom = 282.0
+focus_mode = 0
+size_flags_horizontal = 4
+custom_colors/font_color = Color( 0.686275, 0.12549, 0.105882, 1 )
+custom_colors/font_color_hover = Color( 0.686275, 0.12549, 0.105882, 1 )
+custom_colors/font_color_pressed = Color( 0.686275, 0.12549, 0.105882, 1 )
+custom_fonts/font = SubResource( 9 )
+custom_styles/hover = SubResource( 52 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/normal = SubResource( 10 )
+enabled_focus_mode = 0
+text = "Continue as Guest"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Register" type="Control" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer"]
+visible = false
+margin_right = 394.0
+margin_bottom = 282.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -29.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="username" type="HBoxContainer" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer"]
+margin_right = 394.0
+margin_bottom = 48.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/username"]
+modulate = Color( 0.686275, 0.12549, 0.105882, 1 )
+margin_right = 47.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.14
+texture = ExtResource( 2 )
+expand = true
+
+[node name="usernameField" type="LineEdit" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/username"]
+margin_left = 51.0
+margin_right = 394.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.02
+custom_colors/selection_color = Color( 0.168627, 0.168627, 0.168627, 1 )
+custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.168627, 0.168627, 0.168627, 1 )
+custom_fonts/font = ExtResource( 1 )
+placeholder_text = "User Name"
+
+[node name="password" type="HBoxContainer" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer"]
+margin_top = 52.0
+margin_right = 394.0
+margin_bottom = 152.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/password"]
+margin_right = 50.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.15
+custom_constants/separation = 0
+
+[node name="TextureRect2" type="TextureRect" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/password/VBoxContainer2"]
+modulate = Color( 0.686275, 0.12549, 0.105882, 1 )
+margin_right = 50.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 27 )
+expand = true
+
+[node name="Control" type="Control" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/password/VBoxContainer2"]
+margin_top = 50.0
+margin_right = 50.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/password"]
+margin_left = 54.0
+margin_right = 394.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+
+[node name="createPassword" type="LineEdit" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/password/VBoxContainer"]
+margin_right = 340.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.02
+custom_colors/selection_color = Color( 0.168627, 0.168627, 0.168627, 1 )
+custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.168627, 0.168627, 0.168627, 1 )
+custom_fonts/font = ExtResource( 1 )
+secret = true
+secret_character = "•"
+shortcut_keys_enabled = false
+placeholder_text = "Password"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="show password" type="TextureButton" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/password/VBoxContainer/createPassword"]
+modulate = Color( 0.686275, 0.12549, 0.105882, 1 )
+margin_left = 299.0
+margin_top = 5.0
+margin_right = 339.0
+margin_bottom = 45.0
+toggle_mode = true
+texture_normal = ExtResource( 25 )
+texture_pressed = ExtResource( 26 )
+expand = true
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="confirmPassword" type="LineEdit" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/password/VBoxContainer"]
+margin_top = 52.0
+margin_right = 340.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.02
+custom_colors/selection_color = Color( 0.168627, 0.168627, 0.168627, 1 )
+custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 0.168627, 0.168627, 0.168627, 1 )
+custom_fonts/font = ExtResource( 1 )
+secret = true
+secret_character = "•"
+shortcut_keys_enabled = false
+placeholder_text = "Confirm Password"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="show confirm password" type="TextureButton" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/password/VBoxContainer/confirmPassword"]
+modulate = Color( 0.686275, 0.12549, 0.105882, 1 )
+margin_left = 299.0
+margin_top = 5.0
+margin_right = 339.0
+margin_bottom = 45.0
+toggle_mode = true
+texture_normal = ExtResource( 25 )
+texture_pressed = ExtResource( 26 )
+expand = true
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="invalid" type="RichTextLabel" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer"]
+visible = false
+margin_top = 156.0
+margin_right = 394.0
+margin_bottom = 174.0
+size_flags_horizontal = 3
+custom_colors/default_color = Color( 0.686275, 0.12549, 0.105882, 1 )
+custom_fonts/normal_font = SubResource( 13 )
+text = "Incorrect Username/Password. Please try again."
+fit_content_height = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer"]
+margin_top = 156.0
+margin_right = 394.0
+margin_bottom = 224.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="login" type="Button" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/HBoxContainer"]
+margin_right = 219.0
+margin_bottom = 68.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+custom_colors/font_color = Color( 0.686275, 0.12549, 0.105882, 1 )
+custom_colors/font_color_hover = Color( 0.54, 0.0963, 0.081, 1 )
+custom_colors/font_color_pressed = Color( 0.686275, 0.12549, 0.105882, 1 )
+custom_fonts/font = SubResource( 6 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 7 )
+enabled_focus_mode = 0
+text = "Already have an account? Login"
+flat = true
+align = 0
+expand_icon = true
+script = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Control" type="Control" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/HBoxContainer"]
+margin_left = 223.0
+margin_right = 227.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.03
+
+[node name="registerAccount" type="Button" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/HBoxContainer"]
+margin_left = 231.0
+margin_right = 394.0
+margin_bottom = 68.0
+focus_mode = 0
+size_flags_horizontal = 3
+theme = ExtResource( 9 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 8 )
+enabled_focus_mode = 0
+text = "Register"
+align = 0
+expand_icon = true
+script = ExtResource( 12 )
+
+[node name="TextureRect" type="TextureRect" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/HBoxContainer/registerAccount"]
+modulate = Color( 1, 0.945098, 0.870588, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 125.0
+margin_top = 18.0
+margin_right = -7.0
+margin_bottom = -18.0
+texture = ExtResource( 28 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="-" type="Control" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer"]
+margin_top = 228.0
+margin_right = 394.0
+margin_bottom = 285.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GUEST" type="Button" parent="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer"]
+margin_left = 94.0
+margin_top = 289.0
+margin_right = 300.0
+margin_bottom = 352.0
+focus_mode = 0
+size_flags_horizontal = 4
+custom_colors/font_color = Color( 0.686275, 0.12549, 0.105882, 1 )
+custom_colors/font_color_hover = Color( 0.686275, 0.12549, 0.105882, 1 )
+custom_colors/font_color_pressed = Color( 0.686275, 0.12549, 0.105882, 1 )
+custom_fonts/font = SubResource( 9 )
+custom_styles/hover = SubResource( 52 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/normal = SubResource( 10 )
+enabled_focus_mode = 0
+text = "Continue as Guest"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Main/show/VBoxContainer/HBoxContainer/menu" to="Main/show/VBoxContainer/HBoxContainer/menu" method="_on_menu_pressed"]
+[connection signal="pressed" from="Main/show/VBoxContainer/VBoxContainer/view/view" to="Main/show/VBoxContainer/VBoxContainer/view/view" method="viewRecord"]
+[connection signal="pressed" from="Main/show/VBoxContainer/VBoxContainer/add/add" to="Main/show/VBoxContainer/VBoxContainer/add/add" method="addRecord"]
+[connection signal="pressed" from="Main/hide/VBoxContainer/menu" to="Main/show/VBoxContainer/HBoxContainer/menu" method="_on_menu_pressed"]
+[connection signal="pressed" from="Main/VBoxContainer/Welcome Panel/HBoxContainer/profile picture" to="Main/VBoxContainer/Welcome Panel/HBoxContainer/profile picture" method="profilePicture"]
+[connection signal="pressed" from="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Username/HBoxContainer/VBoxContainer/HBoxContainer/Save" to="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Username/HBoxContainer/VBoxContainer/HBoxContainer/Save" method="changeUsername"]
+[connection signal="pressed" from="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Password/HBoxContainer/VBoxContainer/HBoxContainer/Save" to="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Password/HBoxContainer/VBoxContainer/HBoxContainer/Save" method="changePassword"]
+[connection signal="pressed" from="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Delete Account/HBoxContainer/VBoxContainer/HBoxContainer/delete" to="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Delete Account/HBoxContainer/VBoxContainer/HBoxContainer/delete" method="deleteAccount"]
+[connection signal="pressed" from="Main/VBoxContainer/Footer Panel/HBoxContainer/Save" to="Saving System" method="save"]
+[connection signal="pressed" from="Main/VBoxContainer/Footer Panel/HBoxContainer/Save" to="Main/VBoxContainer/Footer Panel/HBoxContainer/Save" method="createEntry"]
+[connection signal="save" from="Main/VBoxContainer/Footer Panel/HBoxContainer/Save" to="Saving System" method="save"]
+[connection signal="pressed" from="Main/ProfileSettings/Panel4/VBoxContainer/logout/logout" to="Main/ProfileSettings/Panel4/VBoxContainer/logout/logout" method="logOut"]
+[connection signal="pressed" from="Main/ProfileSettings/Panel4/VBoxContainer/settings/settings" to="Main/ProfileSettings/Panel4/VBoxContainer/settings/settings" method="settings"]
+[connection signal="pressed" from="Settings/Settings Background" to="Settings/Settings Background" method="hideSettings"]
+[connection signal="pressed" from="Settings/Settings Background/Panel/VBoxContainer/Change Username/HBoxContainer/Submit" to="Settings/Settings Background/Panel/VBoxContainer/Change Username/HBoxContainer/Submit" method="changeUsername"]
+[connection signal="pressed" from="Settings/Settings Background/Panel/VBoxContainer/Change Password/VBoxContainer2/HBoxContainer/hide" to="Settings/Settings Background/Panel/VBoxContainer/Change Password/VBoxContainer2/HBoxContainer/hide" method="_on_hide_pressed"]
+[connection signal="pressed" from="Settings/Settings Background/Panel/VBoxContainer/Change Password/VBoxContainer3/HBoxContainer/hide" to="Settings/Settings Background/Panel/VBoxContainer/Change Password/VBoxContainer3/HBoxContainer/hide" method="_on_hide_pressed"]
+[connection signal="pressed" from="Settings/Settings Background/Panel/VBoxContainer/Change Password/VBoxContainer4/HBoxContainer/hide" to="Settings/Settings Background/Panel/VBoxContainer/Change Password/VBoxContainer4/HBoxContainer/hide" method="_on_hide_pressed"]
+[connection signal="changePass" from="Settings/Settings Background/Panel/VBoxContainer/Change Password/HBoxContainer/Submit" to="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/HBoxContainer/register" method="_on_Submit_changePass"]
+[connection signal="pressed" from="Settings/Settings Background/Panel/VBoxContainer/Change Password/HBoxContainer/Submit" to="Settings/Settings Background/Panel/VBoxContainer/Change Password/HBoxContainer/Submit" method="changePassword"]
+[connection signal="pressed" from="Settings/Settings Background/Panel/VBoxContainer/Create Account/VBoxContainer3/HBoxContainer/hide" to="Settings/Settings Background/Panel/VBoxContainer/Create Account/VBoxContainer3/HBoxContainer/hide" method="_on_hide_pressed"]
+[connection signal="pressed" from="Settings/Settings Background/Panel/VBoxContainer/Create Account/VBoxContainer4/HBoxContainer/hide" to="Settings/Settings Background/Panel/VBoxContainer/Create Account/VBoxContainer4/HBoxContainer/hide" method="_on_hide_pressed"]
+[connection signal="createAccount" from="Settings/Settings Background/Panel/VBoxContainer/Create Account/HBoxContainer/Submit" to="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/HBoxContainer/register" method="_on_Submit_createAccount"]
+[connection signal="pressed" from="Settings/Settings Background/Panel/VBoxContainer/Create Account/HBoxContainer/Submit" to="Settings/Settings Background/Panel/VBoxContainer/Create Account/HBoxContainer/Submit" method="createAccount"]
+[connection signal="save" from="Confirm/Confirm Window/VBoxContainer/HBoxContainer3/Yes" to="Saving System" method="save"]
+[connection signal="pressed" from="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/password/passwordField/showPassword" to="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/password/passwordField/showPassword" method="showPassword"]
+[connection signal="pressed" from="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/HBoxContainer/register" to="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/HBoxContainer/register" method="_pressed"]
+[connection signal="pressed" from="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/HBoxContainer/login" to="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/HBoxContainer/login" method="login"]
+[connection signal="pressed" from="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/GUEST" to="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/GUEST" method="guestSign"]
+[connection signal="pressed" from="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/password/VBoxContainer/createPassword/show password" to="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/password/VBoxContainer/createPassword/show password" method="showPassword"]
+[connection signal="pressed" from="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/password/VBoxContainer/confirmPassword/show confirm password" to="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/password/VBoxContainer/confirmPassword/show confirm password" method="showPassword"]
+[connection signal="pressed" from="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/HBoxContainer/login" to="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/HBoxContainer/login" method="_pressed"]
+[connection signal="pressed" from="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/HBoxContainer/registerAccount" to="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/HBoxContainer/registerAccount" method="register"]
+[connection signal="pressed" from="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/GUEST" to="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/GUEST" method="_on_GUEST_pressed"]
+
+[editable path="Confirm/Confirm Window"]
