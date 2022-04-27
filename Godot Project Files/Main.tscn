@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=2]
+[gd_scene load_steps=85 format=2]
 
 [ext_resource path="res://Font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Login/user-profile.png" type="Texture" id=2]
@@ -30,16 +30,20 @@
 [ext_resource path="res://Login/right-arrow.png" type="Texture" id=28]
 [ext_resource path="res://SEGOEUI.TTF" type="DynamicFontData" id=29]
 [ext_resource path="res://Main/delete.png" type="Texture" id=30]
-[ext_resource path="res://Main/document-editor.png" type="Texture" id=31]
+[ext_resource path="res://Saving System.gd" type="Script" id=31]
 [ext_resource path="res://Main/settings.png" type="Texture" id=32]
 [ext_resource path="res://Start.gd" type="Script" id=33]
 [ext_resource path="res://Main/sidebar.gd" type="Script" id=34]
 [ext_resource path="res://Main/MainPageButtons.gd" type="Script" id=35]
 [ext_resource path="res://Main/profilePicture.gd" type="Script" id=36]
 [ext_resource path="res://Main/Settings/ChangeAccount.gd" type="Script" id=37]
+[ext_resource path="res://Main/Main.gd" type="Script" id=38]
 
 [sub_resource type="StyleBoxFlat" id=14]
 bg_color = Color( 1, 0.945098, 0.870588, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=60]
+blend_mode = 3
 
 [sub_resource type="DynamicFont" id=17]
 size = 15
@@ -100,71 +104,6 @@ content_margin_left = 18.0
 bg_color = Color( 0.721569, 0.113725, 0.105882, 1 )
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
-
-[sub_resource type="StyleBoxFlat" id=23]
-content_margin_left = 18.0
-bg_color = Color( 0.721569, 0.113725, 0.105882, 1 )
-draw_center = false
-
-[sub_resource type="DynamicFont" id=26]
-size = 20
-outline_size = 1
-use_filter = true
-font_data = ExtResource( 29 )
-
-[sub_resource type="StyleBoxFlat" id=54]
-content_margin_left = 8.0
-content_margin_right = 14.0
-content_margin_top = 6.0
-content_margin_bottom = 6.0
-bg_color = Color( 0.1116, 0.47988, 0.93, 1 )
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-
-[sub_resource type="StyleBoxFlat" id=24]
-content_margin_left = 8.0
-content_margin_right = 14.0
-content_margin_top = 6.0
-content_margin_bottom = 6.0
-bg_color = Color( 0.121569, 0.521569, 1, 1 )
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-
-[sub_resource type="StyleBoxFlat" id=55]
-content_margin_left = 6.0
-bg_color = Color( 0.93, 0.6665, 0, 1 )
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-
-[sub_resource type="StyleBoxFlat" id=29]
-content_margin_left = 6.0
-bg_color = Color( 1, 0.709804, 0, 1 )
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-
-[sub_resource type="StyleBoxFlat" id=56]
-content_margin_left = 6.0
-bg_color = Color( 0.92, 0.1104, 0.1104, 1 )
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-
-[sub_resource type="StyleBoxFlat" id=25]
-content_margin_left = 6.0
-bg_color = Color( 1, 0.121569, 0.121569, 1 )
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxEmpty" id=36]
 
@@ -263,6 +202,17 @@ SpinBox/icons/updown = SubResource( 41 )
 VScrollBar/styles/scroll = SubResource( 42 )
 
 [sub_resource type="ExternalTexture" id=47]
+
+[sub_resource type="StyleBoxFlat" id=59]
+content_margin_left = 20.0
+content_margin_right = 20.0
+content_margin_top = 20.0
+content_margin_bottom = 20.0
+bg_color = Color( 0.88, 0.1672, 0.2266, 1 )
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
 
 [sub_resource type="StyleBoxFlat" id=48]
 content_margin_left = 20.0
@@ -363,6 +313,9 @@ font_data = ExtResource( 3 )
 [node name="Scene" type="Node2D"]
 script = ExtResource( 33 )
 
+[node name="Saving System" type="Node" parent="."]
+script = ExtResource( 31 )
+
 [node name="Main" type="HBoxContainer" parent="."]
 margin_right = 1280.0
 margin_bottom = 720.0
@@ -430,6 +383,7 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.19
 
 [node name="TextureRect" type="TextureRect" parent="Main/show/VBoxContainer/HBoxContainer2"]
+material = SubResource( 60 )
 margin_left = 21.0
 margin_right = 94.0
 margin_bottom = 186.0
@@ -662,13 +616,14 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_styles/panel = SubResource( 53 )
+script = ExtResource( 38 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Main" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Main"]
+[node name="Not Empty" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Main"]
 margin_left = 15.0
-margin_right = 1189.0
+margin_right = 1031.0
 margin_bottom = 560.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -676,8 +631,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="search" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Main"]
-margin_right = 1174.0
+[node name="search" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Not Empty"]
+margin_right = 1016.0
 margin_bottom = 48.0
 size_flags_horizontal = 3
 theme = ExtResource( 9 )
@@ -688,7 +643,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="Main/VBoxContainer/Main Panel/Main/Main/search"]
+[node name="TextureRect" type="TextureRect" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/search"]
 modulate = Color( 0.721569, 0.113725, 0.105882, 1 )
 margin_right = 40.0
 margin_bottom = 40.0
@@ -698,31 +653,31 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="-" type="Control" parent="Main/VBoxContainer/Main Panel/Main/Main"]
+[node name="-" type="Control" parent="Main/VBoxContainer/Main Panel/Main/Not Empty"]
 margin_top = 52.0
-margin_right = 1174.0
+margin_right = 1016.0
 margin_bottom = 61.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.02
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Main/Main"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Main/Not Empty"]
 margin_top = 65.0
-margin_right = 1174.0
+margin_right = 1016.0
 margin_bottom = 560.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="categories" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer"]
-margin_right = 1174.0
+[node name="categories" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/VBoxContainer"]
+margin_right = 1016.0
 margin_bottom = 48.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
 custom_constants/separation = 2
 
-[node name="LineEdit" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer/categories"]
-margin_right = 286.0
+[node name="LineEdit" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/VBoxContainer/categories"]
+margin_right = 241.0
 margin_bottom = 48.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.24
@@ -733,9 +688,9 @@ text = "Name"
 editable = false
 selecting_enabled = false
 
-[node name="LineEdit2" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer/categories"]
-margin_left = 288.0
-margin_right = 368.0
+[node name="LineEdit2" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/VBoxContainer/categories"]
+margin_left = 243.0
+margin_right = 323.0
 margin_bottom = 48.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.0
@@ -747,9 +702,9 @@ align = 1
 editable = false
 selecting_enabled = false
 
-[node name="LineEdit3" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer/categories"]
-margin_left = 370.0
-margin_right = 450.0
+[node name="LineEdit3" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/VBoxContainer/categories"]
+margin_left = 325.0
+margin_right = 405.0
 margin_bottom = 48.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.0
@@ -761,9 +716,9 @@ align = 1
 editable = false
 selecting_enabled = false
 
-[node name="LineEdit4" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer/categories"]
-margin_left = 452.0
-margin_right = 696.0
+[node name="LineEdit4" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/VBoxContainer/categories"]
+margin_left = 407.0
+margin_right = 613.0
 margin_bottom = 48.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.06
@@ -775,9 +730,9 @@ align = 1
 editable = false
 selecting_enabled = false
 
-[node name="LineEdit5" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer/categories"]
-margin_left = 698.0
-margin_right = 941.0
+[node name="LineEdit5" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/VBoxContainer/categories"]
+margin_left = 615.0
+margin_right = 819.0
 margin_bottom = 48.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.05
@@ -789,9 +744,9 @@ align = 1
 editable = false
 selecting_enabled = false
 
-[node name="LineEdit6" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer/categories"]
-margin_left = 943.0
-margin_right = 1174.0
+[node name="settings" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/VBoxContainer/categories"]
+margin_left = 821.0
+margin_right = 1016.0
 margin_bottom = 48.0
 size_flags_horizontal = 3
 custom_colors/font_color_uneditable = Color( 1, 1, 1, 1 )
@@ -802,140 +757,44 @@ align = 1
 editable = false
 selecting_enabled = false
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/VBoxContainer"]
 margin_top = 52.0
-margin_right = 1174.0
+margin_right = 1016.0
 margin_bottom = 495.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 9 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer/ScrollContainer"]
+[node name="item list" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Main/Not Empty/VBoxContainer/ScrollContainer"]
 margin_top = 6.0
-margin_right = 1174.0
+margin_right = 1016.0
 margin_bottom = 443.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="item" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer/ScrollContainer/VBoxContainer"]
-margin_right = 1174.0
-margin_bottom = 48.0
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.0
-custom_constants/separation = 2
+[node name="Empty" type="Panel" parent="Main/VBoxContainer/Main Panel/Main"]
+visible = false
+margin_left = 15.0
+margin_right = 1031.0
+margin_bottom = 560.0
 
-[node name="name" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer/ScrollContainer/VBoxContainer/item"]
-margin_right = 286.0
-margin_bottom = 48.0
+[node name="LineEdit" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Empty"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.24
-custom_colors/font_color_uneditable = Color( 0.721569, 0.113725, 0.105882, 1 )
-custom_fonts/font = SubResource( 19 )
-custom_styles/read_only = SubResource( 23 )
-text = "Name"
-editable = false
-selecting_enabled = false
-
-[node name="age" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer/ScrollContainer/VBoxContainer/item"]
-margin_left = 288.0
-margin_right = 368.0
-margin_bottom = 48.0
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.0
-custom_colors/font_color_uneditable = Color( 0.721569, 0.113725, 0.105882, 1 )
-custom_fonts/font = SubResource( 19 )
-custom_styles/read_only = SubResource( 23 )
-text = "Age"
+size_flags_vertical = 5
+text = "No employee records to display."
 align = 1
-editable = false
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
 selecting_enabled = false
-
-[node name="sex" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer/ScrollContainer/VBoxContainer/item"]
-margin_left = 370.0
-margin_right = 450.0
-margin_bottom = 48.0
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.0
-custom_colors/font_color_uneditable = Color( 0.721569, 0.113725, 0.105882, 1 )
-custom_fonts/font = SubResource( 19 )
-custom_styles/read_only = SubResource( 23 )
-text = "Sex"
-align = 1
-editable = false
-selecting_enabled = false
-
-[node name="employeeid" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer/ScrollContainer/VBoxContainer/item"]
-margin_left = 452.0
-margin_right = 696.0
-margin_bottom = 48.0
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.06
-custom_colors/font_color_uneditable = Color( 0.721569, 0.113725, 0.105882, 1 )
-custom_fonts/font = SubResource( 19 )
-custom_styles/read_only = SubResource( 23 )
-text = "Employee ID "
-align = 1
-editable = false
-selecting_enabled = false
-
-[node name="department" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer/ScrollContainer/VBoxContainer/item"]
-margin_left = 698.0
-margin_right = 941.0
-margin_bottom = 48.0
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.05
-custom_colors/font_color_uneditable = Color( 0.721569, 0.113725, 0.105882, 1 )
-custom_fonts/font = SubResource( 19 )
-custom_styles/read_only = SubResource( 23 )
-text = " Department"
-align = 1
-editable = false
-selecting_enabled = false
-
-[node name="settings" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer/ScrollContainer/VBoxContainer/item"]
-margin_left = 943.0
-margin_right = 1174.0
-margin_bottom = 48.0
-size_flags_horizontal = 3
-
-[node name="edit" type="Button" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer/ScrollContainer/VBoxContainer/item/settings"]
-margin_right = 121.0
-margin_bottom = 48.0
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.38
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_fonts/font = SubResource( 26 )
-custom_styles/hover = SubResource( 54 )
-custom_styles/pressed = SubResource( 24 )
-custom_styles/normal = SubResource( 24 )
-text = "Edit"
-icon = ExtResource( 31 )
-align = 2
-expand_icon = true
-
-[node name="view" type="Button" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer/ScrollContainer/VBoxContainer/item/settings"]
-margin_left = 125.0
-margin_right = 176.0
-margin_bottom = 48.0
-size_flags_horizontal = 3
-custom_styles/hover = SubResource( 55 )
-custom_styles/pressed = SubResource( 29 )
-custom_styles/normal = SubResource( 29 )
-icon = ExtResource( 25 )
-expand_icon = true
-
-[node name="delete" type="Button" parent="Main/VBoxContainer/Main Panel/Main/Main/VBoxContainer/ScrollContainer/VBoxContainer/item/settings"]
-margin_left = 180.0
-margin_right = 231.0
-margin_bottom = 48.0
-size_flags_horizontal = 3
-custom_styles/hover = SubResource( 56 )
-custom_styles/pressed = SubResource( 25 )
-custom_styles/normal = SubResource( 25 )
-icon = ExtResource( 30 )
-expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Data" type="ScrollContainer" parent="Main/VBoxContainer/Main Panel"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 17.0
@@ -950,7 +809,7 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data"]
 margin_right = 1012.0
-margin_bottom = 685.0
+margin_bottom = 730.0
 rect_pivot_offset = Vector2( 476, 536 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -958,7 +817,7 @@ custom_constants/separation = 44
 
 [node name="Personal Info" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer"]
 margin_right = 1012.0
-margin_bottom = 289.0
+margin_bottom = 334.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -981,14 +840,14 @@ size_flags_vertical = 3
 [node name="HBoxContainer" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info"]
 margin_top = 54.0
 margin_right = 1012.0
-margin_bottom = 289.0
+margin_bottom = 334.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 14
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer"]
 margin_right = 328.0
-margin_bottom = 235.0
+margin_bottom = 280.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 21
@@ -1003,14 +862,14 @@ custom_styles/normal = SubResource( 35 )
 placeholder_text = "First Name"
 placeholder_alpha = 1.0
 
-[node name="Date" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer"]
+[node name="birthday" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer"]
 margin_top = 64.0
 margin_right = 328.0
 margin_bottom = 132.0
 size_flags_vertical = 5
 custom_constants/separation = -1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/Date"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/birthday"]
 margin_right = 328.0
 margin_bottom = 21.0
 custom_colors/default_color = Color( 0.721569, 0.113725, 0.105882, 1 )
@@ -1018,7 +877,7 @@ custom_fonts/normal_font = SubResource( 38 )
 text = "Date of Birth"
 fit_content_height = true
 
-[node name="LineEdit2" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/Date"]
+[node name="LineEdit2" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/birthday"]
 margin_top = 20.0
 margin_right = 328.0
 margin_bottom = 68.0
@@ -1026,7 +885,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 9 )
 
-[node name="month birthday" type="OptionButton" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/Date/LineEdit2"]
+[node name="month birthday" type="OptionButton" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/birthday/LineEdit2"]
 margin_right = 107.0
 margin_bottom = 48.0
 focus_mode = 0
@@ -1049,7 +908,7 @@ text = "January"
 items = [ "January", null, false, 0, null, "February", null, false, 1, null, "March", null, false, 2, null, "April", null, false, 3, null, "May", null, false, 4, null, "June", null, false, 5, null, "July", null, false, 6, null, "August", null, false, 7, null, "September", null, false, 8, null, "October", null, false, 9, null, "November", null, false, 10, null, "December", null, false, 11, null ]
 selected = 0
 
-[node name="day birthday" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/Date/LineEdit2"]
+[node name="day birthday" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/birthday/LineEdit2"]
 margin_left = 111.0
 margin_right = 192.0
 margin_bottom = 48.0
@@ -1061,7 +920,7 @@ min_value = 1.0
 max_value = 31.0
 value = 1.0
 
-[node name="year birthday" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/Date/LineEdit2"]
+[node name="year birthday" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/birthday/LineEdit2"]
 margin_left = 196.0
 margin_right = 285.0
 margin_bottom = 48.0
@@ -1073,7 +932,7 @@ min_value = 1800.0
 max_value = 9999.0
 value = 2022.0
 
-[node name="TextureRect" type="TextureRect" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/Date/LineEdit2"]
+[node name="TextureRect" type="TextureRect" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/birthday/LineEdit2"]
 modulate = Color( 0.686275, 0.12549, 0.105882, 1 )
 margin_left = 289.0
 margin_right = 328.0
@@ -1085,10 +944,50 @@ texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
 
-[node name="Address" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer"]
+[node name="sex" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer"]
 margin_top = 153.0
 margin_right = 328.0
-margin_bottom = 235.0
+margin_bottom = 216.0
+size_flags_vertical = 5
+custom_constants/separation = -1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/sex"]
+margin_right = 328.0
+margin_bottom = 21.0
+custom_colors/default_color = Color( 0.721569, 0.113725, 0.105882, 1 )
+custom_fonts/normal_font = SubResource( 38 )
+text = "Sex"
+fit_content_height = true
+
+[node name="sex" type="OptionButton" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer/sex"]
+margin_top = 20.0
+margin_right = 328.0
+margin_bottom = 63.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.7
+theme = ExtResource( 9 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color_focus = Color( 0.490196, 0.490196, 0.490196, 1 )
+custom_colors/font_color = Color( 0.490196, 0.490196, 0.490196, 1 )
+custom_colors/font_color_hover = Color( 0.490196, 0.490196, 0.490196, 1 )
+custom_colors/font_color_pressed = Color( 0.490196, 0.490196, 0.490196, 1 )
+custom_fonts/font = SubResource( 34 )
+custom_icons/arrow = SubResource( 46 )
+custom_styles/hover = SubResource( 35 )
+custom_styles/pressed = SubResource( 35 )
+custom_styles/focus = SubResource( 35 )
+custom_styles/normal = SubResource( 35 )
+enabled_focus_mode = 0
+text = "Male"
+items = [ "Male", null, false, 0, null, "Female", null, false, 1, null ]
+selected = 0
+
+[node name="address" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer"]
+margin_top = 237.0
+margin_right = 328.0
+margin_bottom = 280.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 9 )
@@ -1100,7 +999,7 @@ placeholder_alpha = 1.0
 [node name="VBoxContainer2" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer"]
 margin_left = 342.0
 margin_right = 670.0
-margin_bottom = 235.0
+margin_bottom = 280.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 21
@@ -1115,7 +1014,7 @@ custom_styles/normal = SubResource( 35 )
 placeholder_text = "Middle Name"
 placeholder_alpha = 1.0
 
-[node name="LineEdit2" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer2"]
+[node name="place birth" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer2"]
 margin_top = 64.0
 margin_right = 328.0
 margin_bottom = 107.0
@@ -1126,10 +1025,10 @@ custom_styles/normal = SubResource( 35 )
 placeholder_text = "Place of Birth"
 placeholder_alpha = 1.0
 
-[node name="LineEdit3" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer2"]
+[node name="tin" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer2"]
 margin_top = 128.0
 margin_right = 328.0
-margin_bottom = 171.0
+margin_bottom = 193.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 9 )
@@ -1138,10 +1037,10 @@ custom_styles/normal = SubResource( 35 )
 placeholder_text = "TIN"
 placeholder_alpha = 1.0
 
-[node name="LineEdit4" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer2"]
-margin_top = 192.0
+[node name="sss" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer2"]
+margin_top = 214.0
 margin_right = 328.0
-margin_bottom = 235.0
+margin_bottom = 280.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 9 )
@@ -1153,7 +1052,7 @@ placeholder_alpha = 1.0
 [node name="VBoxContainer3" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer"]
 margin_left = 684.0
 margin_right = 1012.0
-margin_bottom = 235.0
+margin_bottom = 280.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 21
@@ -1168,7 +1067,7 @@ custom_styles/normal = SubResource( 35 )
 placeholder_text = "Last Name"
 placeholder_alpha = 1.0
 
-[node name="LineEdit2" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer3"]
+[node name="nationality" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer3"]
 margin_top = 64.0
 margin_right = 328.0
 margin_bottom = 107.0
@@ -1179,10 +1078,10 @@ custom_styles/normal = SubResource( 35 )
 placeholder_text = "Nationality"
 placeholder_alpha = 1.0
 
-[node name="LineEdit3" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer3"]
+[node name="philhealth" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer3"]
 margin_top = 128.0
 margin_right = 328.0
-margin_bottom = 171.0
+margin_bottom = 193.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 9 )
@@ -1191,10 +1090,10 @@ custom_styles/normal = SubResource( 35 )
 placeholder_text = "Philhealth"
 placeholder_alpha = 1.0
 
-[node name="LineEdit4" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer3"]
-margin_top = 192.0
+[node name="hdmf" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Personal Info/HBoxContainer/VBoxContainer3"]
+margin_top = 214.0
 margin_right = 328.0
-margin_bottom = 235.0
+margin_bottom = 280.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 9 )
@@ -1204,9 +1103,9 @@ placeholder_text = "HDMF"
 placeholder_alpha = 1.0
 
 [node name="Education" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer"]
-margin_top = 333.0
+margin_top = 378.0
 margin_right = 1012.0
-margin_bottom = 519.0
+margin_bottom = 564.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -1219,7 +1118,7 @@ custom_fonts/normal_font = SubResource( 33 )
 text = "Education"
 fit_content_height = true
 
-[node name="Control" type="Control" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education"]
+[node name="-" type="Control" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education"]
 margin_top = 50.0
 margin_right = 1012.0
 margin_bottom = 50.0
@@ -1241,7 +1140,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 21
 
-[node name="LineEdit" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer"]
+[node name="educ attainment" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer"]
 margin_right = 328.0
 margin_bottom = 43.0
 size_flags_horizontal = 3
@@ -1251,7 +1150,7 @@ custom_styles/normal = SubResource( 35 )
 placeholder_text = "Highest Attainment"
 placeholder_alpha = 1.0
 
-[node name="Date" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer"]
+[node name="educ attend from" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer"]
 margin_top = 64.0
 margin_right = 328.0
 margin_bottom = 132.0
@@ -1261,7 +1160,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer/Date"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer/educ attend from"]
 margin_right = 328.0
 margin_bottom = 21.0
 rect_pivot_offset = Vector2( 203, -298 )
@@ -1270,7 +1169,7 @@ custom_fonts/normal_font = SubResource( 38 )
 text = "Attended from"
 fit_content_height = true
 
-[node name="LineEdit2" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer/Date"]
+[node name="LineEdit2" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer/educ attend from"]
 margin_top = 20.0
 margin_right = 328.0
 margin_bottom = 68.0
@@ -1279,7 +1178,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 9 )
 
-[node name="OptionButton" type="OptionButton" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer/Date/LineEdit2"]
+[node name="educ month from" type="OptionButton" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer/educ attend from/LineEdit2"]
 margin_right = 113.0
 margin_bottom = 48.0
 size_flags_horizontal = 3
@@ -1293,7 +1192,7 @@ text = "January"
 items = [ "January", null, false, 0, null, "February", null, false, 1, null, "March", null, false, 2, null, "April", null, false, 3, null, "May", null, false, 4, null, "June", null, false, 5, null, "July", null, false, 6, null, "August", null, false, 7, null, "September", null, false, 8, null, "October", null, false, 9, null, "November", null, false, 10, null, "December", null, false, 11, null ]
 selected = 0
 
-[node name="OptionButton2" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer/Date/LineEdit2"]
+[node name="educ day from" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer/educ attend from/LineEdit2"]
 margin_left = 117.0
 margin_right = 198.0
 margin_bottom = 48.0
@@ -1305,7 +1204,7 @@ min_value = 1.0
 max_value = 31.0
 value = 1.0
 
-[node name="OptionButton3" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer/Date/LineEdit2"]
+[node name="educ year from" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer/educ attend from/LineEdit2"]
 margin_left = 202.0
 margin_right = 283.0
 margin_bottom = 48.0
@@ -1316,7 +1215,7 @@ min_value = 1800.0
 max_value = 9999.0
 value = 2022.0
 
-[node name="TextureRect" type="TextureRect" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer/Date/LineEdit2"]
+[node name="TextureRect" type="TextureRect" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer/educ attend from/LineEdit2"]
 modulate = Color( 0.686275, 0.12549, 0.105882, 1 )
 margin_left = 287.0
 margin_right = 328.0
@@ -1336,7 +1235,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 21
 
-[node name="LineEdit" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2"]
+[node name="school name" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2"]
 margin_right = 328.0
 margin_bottom = 43.0
 size_flags_horizontal = 3
@@ -1346,7 +1245,7 @@ custom_styles/normal = SubResource( 35 )
 placeholder_text = "School Name"
 placeholder_alpha = 1.0
 
-[node name="Date" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2"]
+[node name="educ attend to" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2"]
 margin_top = 64.0
 margin_right = 328.0
 margin_bottom = 132.0
@@ -1356,7 +1255,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2/Date"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2/educ attend to"]
 margin_right = 328.0
 margin_bottom = 21.0
 custom_colors/default_color = Color( 0.721569, 0.113725, 0.105882, 1 )
@@ -1364,7 +1263,7 @@ custom_fonts/normal_font = SubResource( 38 )
 text = "Attended to "
 fit_content_height = true
 
-[node name="LineEdit2" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2/Date"]
+[node name="LineEdit2" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2/educ attend to"]
 margin_top = 20.0
 margin_right = 328.0
 margin_bottom = 68.0
@@ -1373,7 +1272,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 9 )
 
-[node name="OptionButton" type="OptionButton" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2/Date/LineEdit2"]
+[node name="educ month to" type="OptionButton" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2/educ attend to/LineEdit2"]
 margin_right = 113.0
 margin_bottom = 48.0
 size_flags_horizontal = 3
@@ -1387,7 +1286,7 @@ text = "January"
 items = [ "January", null, false, 0, null, "February", null, false, 1, null, "March", null, false, 2, null, "April", null, false, 3, null, "May", null, false, 4, null, "June", null, false, 5, null, "July", null, false, 6, null, "August", null, false, 7, null, "September", null, false, 8, null, "October", null, false, 9, null, "November", null, false, 10, null, "December", null, false, 11, null ]
 selected = 0
 
-[node name="OptionButton2" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2/Date/LineEdit2"]
+[node name="educ day to" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2/educ attend to/LineEdit2"]
 margin_left = 117.0
 margin_right = 198.0
 margin_bottom = 48.0
@@ -1399,7 +1298,7 @@ min_value = 1.0
 max_value = 31.0
 value = 1.0
 
-[node name="OptionButton3" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2/Date/LineEdit2"]
+[node name="educ year to" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2/educ attend to/LineEdit2"]
 margin_left = 202.0
 margin_right = 283.0
 margin_bottom = 48.0
@@ -1410,7 +1309,7 @@ min_value = 1800.0
 max_value = 9999.0
 value = 2022.0
 
-[node name="TextureRect" type="TextureRect" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2/Date/LineEdit2"]
+[node name="TextureRect" type="TextureRect" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Education/HBoxContainer/VBoxContainer2/educ attend to/LineEdit2"]
 modulate = Color( 0.686275, 0.12549, 0.105882, 1 )
 margin_left = 287.0
 margin_right = 328.0
@@ -1431,9 +1330,9 @@ size_flags_vertical = 3
 custom_constants/separation = 21
 
 [node name="Employment" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer"]
-margin_top = 563.0
+margin_top = 608.0
 margin_right = 1012.0
-margin_bottom = 685.0
+margin_bottom = 730.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -1446,7 +1345,7 @@ custom_fonts/normal_font = SubResource( 33 )
 text = "Employment Details"
 fit_content_height = true
 
-[node name="Control" type="Control" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment"]
+[node name="-" type="Control" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment"]
 margin_top = 50.0
 margin_right = 1012.0
 margin_bottom = 50.0
@@ -1471,7 +1370,7 @@ custom_constants/separation = 20
 [node name="-" type="Control" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer"]
 margin_right = 328.0
 
-[node name="LineEdit" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer"]
+[node name="emp position" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer"]
 margin_top = 20.0
 margin_right = 328.0
 margin_bottom = 63.0
@@ -1493,7 +1392,7 @@ custom_constants/separation = 20
 [node name="-" type="Control" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer2"]
 margin_right = 328.0
 
-[node name="LineEdit" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer2"]
+[node name="department" type="LineEdit" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer2"]
 margin_top = 20.0
 margin_right = 328.0
 margin_bottom = 63.0
@@ -1513,7 +1412,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 21
 
-[node name="Date" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3"]
+[node name="emp attended" type="VBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3"]
 margin_right = 328.0
 margin_bottom = 68.0
 size_flags_vertical = 5
@@ -1522,7 +1421,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3/Date"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3/emp attended"]
 margin_right = 328.0
 margin_bottom = 21.0
 custom_colors/default_color = Color( 0.721569, 0.113725, 0.105882, 1 )
@@ -1530,7 +1429,7 @@ custom_fonts/normal_font = SubResource( 38 )
 text = "Attended to "
 fit_content_height = true
 
-[node name="LineEdit2" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3/Date"]
+[node name="LineEdit2" type="HBoxContainer" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3/emp attended"]
 margin_top = 20.0
 margin_right = 328.0
 margin_bottom = 68.0
@@ -1538,7 +1437,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 9 )
 
-[node name="OptionButton" type="OptionButton" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3/Date/LineEdit2"]
+[node name="employ month" type="OptionButton" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3/emp attended/LineEdit2"]
 margin_right = 113.0
 margin_bottom = 48.0
 size_flags_horizontal = 3
@@ -1552,7 +1451,7 @@ text = "January"
 items = [ "January", null, false, 0, null, "February", null, false, 1, null, "March", null, false, 2, null, "April", null, false, 3, null, "May", null, false, 4, null, "June", null, false, 5, null, "July", null, false, 6, null, "August", null, false, 7, null, "September", null, false, 8, null, "October", null, false, 9, null, "November", null, false, 10, null, "December", null, false, 11, null ]
 selected = 0
 
-[node name="OptionButton2" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3/Date/LineEdit2"]
+[node name="employ day" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3/emp attended/LineEdit2"]
 margin_left = 117.0
 margin_right = 198.0
 margin_bottom = 48.0
@@ -1564,7 +1463,7 @@ min_value = 1.0
 max_value = 31.0
 value = 1.0
 
-[node name="OptionButton3" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3/Date/LineEdit2"]
+[node name="employ year" type="SpinBox" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3/emp attended/LineEdit2"]
 margin_left = 202.0
 margin_right = 283.0
 margin_bottom = 48.0
@@ -1575,7 +1474,7 @@ min_value = 1800.0
 max_value = 9999.0
 value = 2022.0
 
-[node name="TextureRect" type="TextureRect" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3/Date/LineEdit2"]
+[node name="TextureRect" type="TextureRect" parent="Main/VBoxContainer/Main Panel/Data/VBoxContainer/Employment/HBoxContainer/VBoxContainer3/emp attended/LineEdit2"]
 modulate = Color( 0.686275, 0.12549, 0.105882, 1 )
 margin_left = 287.0
 margin_right = 328.0
@@ -1588,7 +1487,6 @@ expand = true
 stretch_mode = 6
 
 [node name="Settings" type="ScrollContainer" parent="Main/VBoxContainer/Main Panel"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 17.0
@@ -1597,7 +1495,6 @@ margin_right = -17.0
 margin_bottom = -28.0
 custom_styles/bg = SubResource( 36 )
 scroll_horizontal_enabled = false
-scroll_vertical = 462
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1710,6 +1607,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.98
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 59 )
+custom_styles/pressed = SubResource( 48 )
 custom_styles/normal = SubResource( 48 )
 text = "Save"
 icon = ExtResource( 7 )
@@ -1818,6 +1717,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.98
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 59 )
+custom_styles/pressed = SubResource( 48 )
 custom_styles/normal = SubResource( 48 )
 text = "Save"
 icon = ExtResource( 7 )
@@ -1915,6 +1816,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.98
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 59 )
+custom_styles/pressed = SubResource( 48 )
 custom_styles/normal = SubResource( 48 )
 text = "Delete"
 icon = ExtResource( 30 )
@@ -1949,33 +1852,36 @@ __meta__ = {
 }
 
 [node name="-2" type="Control" parent="Main/VBoxContainer/Footer Panel/HBoxContainer"]
-margin_right = 907.0
-margin_bottom = 65.0
+margin_right = 702.0
+margin_bottom = 68.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 15.36
 
 [node name="Save" type="Button" parent="Main/VBoxContainer/Footer Panel/HBoxContainer"]
-visible = false
-margin_left = 812.0
-margin_right = 1075.0
+margin_left = 702.0
+margin_right = 930.0
 margin_bottom = 68.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.98
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_styles/hover = SubResource( 59 )
+custom_styles/pressed = SubResource( 48 )
 custom_styles/normal = SubResource( 48 )
 text = "Save"
 icon = ExtResource( 7 )
 expand_icon = true
+script = ExtResource( 35 )
 
 [node name="-3" type="Control" parent="Main/VBoxContainer/Footer Panel/HBoxContainer"]
-margin_left = 907.0
+margin_left = 930.0
 margin_right = 1010.0
-margin_bottom = 65.0
+margin_bottom = 68.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.74
 
 [node name="ProfileSettings" type="Polygon2D" parent="Main"]
+visible = false
 position = Vector2( -67, 3 )
 color = Color( 1, 0.976471, 0.945098, 1 )
 polygon = PoolVector2Array( 1305, 72, 1321, 95, 1289, 95 )
@@ -2532,8 +2438,30 @@ __meta__ = {
 [node name="Confirm Window" parent="Confirm" instance=ExtResource( 11 )]
 anchor_top = 0.0
 anchor_bottom = 1.0
+margin_left = 92.0
 margin_top = 282.0
+margin_right = -92.0
 margin_bottom = -282.0
+
+[node name="HBoxContainer" parent="Confirm/Confirm Window/VBoxContainer" index="0"]
+margin_top = 7.0
+margin_right = 1056.0
+margin_bottom = 36.0
+
+[node name="RichTextLabel" parent="Confirm/Confirm Window/VBoxContainer/HBoxContainer" index="0"]
+margin_right = 1056.0
+
+[node name="HBoxContainer3" parent="Confirm/Confirm Window/VBoxContainer" index="1"]
+margin_top = 40.0
+margin_right = 1056.0
+margin_bottom = 108.0
+
+[node name="Yes" parent="Confirm/Confirm Window/VBoxContainer/HBoxContainer3" index="0"]
+margin_right = 526.0
+
+[node name="No" parent="Confirm/Confirm Window/VBoxContainer/HBoxContainer3" index="1"]
+margin_left = 530.0
+margin_right = 1056.0
 
 [node name="Login" type="Control" parent="."]
 visible = false
@@ -3073,6 +3001,9 @@ __meta__ = {
 [connection signal="pressed" from="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Username/HBoxContainer/VBoxContainer/HBoxContainer/Save" to="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Username/HBoxContainer/VBoxContainer/HBoxContainer/Save" method="changeUsername"]
 [connection signal="pressed" from="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Password/HBoxContainer/VBoxContainer/HBoxContainer/Save" to="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Change Password/HBoxContainer/VBoxContainer/HBoxContainer/Save" method="changePassword"]
 [connection signal="pressed" from="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Delete Account/HBoxContainer/VBoxContainer/HBoxContainer/delete" to="Main/VBoxContainer/Main Panel/Settings/VBoxContainer2/VBoxContainer/Delete Account/HBoxContainer/VBoxContainer/HBoxContainer/delete" method="deleteAccount"]
+[connection signal="pressed" from="Main/VBoxContainer/Footer Panel/HBoxContainer/Save" to="Saving System" method="save"]
+[connection signal="pressed" from="Main/VBoxContainer/Footer Panel/HBoxContainer/Save" to="Main/VBoxContainer/Footer Panel/HBoxContainer/Save" method="createEntry"]
+[connection signal="save" from="Main/VBoxContainer/Footer Panel/HBoxContainer/Save" to="Saving System" method="save"]
 [connection signal="pressed" from="Main/ProfileSettings/Panel4/VBoxContainer/logout/logout" to="Main/ProfileSettings/Panel4/VBoxContainer/logout/logout" method="logOut"]
 [connection signal="pressed" from="Main/ProfileSettings/Panel4/VBoxContainer/settings/settings" to="Main/ProfileSettings/Panel4/VBoxContainer/settings/settings" method="settings"]
 [connection signal="pressed" from="Settings/Settings Background" to="Settings/Settings Background" method="hideSettings"]
@@ -3086,6 +3017,7 @@ __meta__ = {
 [connection signal="pressed" from="Settings/Settings Background/Panel/VBoxContainer/Create Account/VBoxContainer4/HBoxContainer/hide" to="Settings/Settings Background/Panel/VBoxContainer/Create Account/VBoxContainer4/HBoxContainer/hide" method="_on_hide_pressed"]
 [connection signal="createAccount" from="Settings/Settings Background/Panel/VBoxContainer/Create Account/HBoxContainer/Submit" to="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/HBoxContainer/register" method="_on_Submit_createAccount"]
 [connection signal="pressed" from="Settings/Settings Background/Panel/VBoxContainer/Create Account/HBoxContainer/Submit" to="Settings/Settings Background/Panel/VBoxContainer/Create Account/HBoxContainer/Submit" method="createAccount"]
+[connection signal="save" from="Confirm/Confirm Window/VBoxContainer/HBoxContainer3/Yes" to="Saving System" method="save"]
 [connection signal="pressed" from="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/password/passwordField/showPassword" to="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/password/passwordField/showPassword" method="showPassword"]
 [connection signal="pressed" from="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/HBoxContainer/register" to="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/HBoxContainer/register" method="_pressed"]
 [connection signal="pressed" from="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/HBoxContainer/login" to="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/HBoxContainer/login" method="login"]
@@ -3095,3 +3027,5 @@ __meta__ = {
 [connection signal="pressed" from="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/HBoxContainer/login" to="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/HBoxContainer/login" method="_pressed"]
 [connection signal="pressed" from="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/HBoxContainer/registerAccount" to="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/HBoxContainer/registerAccount" method="register"]
 [connection signal="pressed" from="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/GUEST" to="Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/GUEST" method="_on_GUEST_pressed"]
+
+[editable path="Confirm/Confirm Window"]

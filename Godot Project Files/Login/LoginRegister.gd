@@ -25,6 +25,7 @@ func _ready() -> void:
 			"accounts": defaultAccounts
 		}
 		file.store_var(dict)
+		accounts = dict["accounts"]
 	file.close()
 
 func register() -> void:
@@ -32,7 +33,7 @@ func register() -> void:
 	var passwordInput = get_tree().current_scene.get_node("Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/password/VBoxContainer/createPassword").text
 	var confirmPassword = get_tree().current_scene.get_node("Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/password/VBoxContainer/confirmPassword").text
 	var invalidRegister = get_tree().current_scene.get_node("Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Register/VBoxContainer/invalid")
-	if usernameInput != " "\
+	if usernameInput != ""\
 	and confirmPassword == passwordInput\
 	and (usernameInput != "Guest" or passwordInput != "Guest"):
 		saveNewAccount(usernameInput,passwordInput)
@@ -44,6 +45,11 @@ func register() -> void:
 		invalidRegister.visible = true
 
 func login() -> void:
+	var file = File.new()
+	if file.file_exists(savePath):
+		file.open(savePath,File.READ)
+		var dict = file.get_var()
+		accounts = dict["accounts"]
 	var usernameInput = get_tree().current_scene.get_node("Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/username/usernameField").text
 	var passwordInput = get_tree().current_scene.get_node("Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/password/passwordField").text
 	var invalidLogin = get_tree().current_scene.get_node("Login/HBoxContainer/Panel2/Node2D/VBoxContainer/Login/VBoxContainer/invalid")
@@ -71,6 +77,7 @@ func login() -> void:
 
 func saveNewAccount(u,p):
 	accounts[u] = p
+	print(accounts)
 	var file = File.new()
 	file.open(savePath,File.WRITE)
 	var dict = {

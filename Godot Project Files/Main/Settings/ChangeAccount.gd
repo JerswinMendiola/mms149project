@@ -1,5 +1,7 @@
 extends Button
 
+var savePath = "user://data.save"
+
 var oldUsername
 var newUsername
 var confirmUsername
